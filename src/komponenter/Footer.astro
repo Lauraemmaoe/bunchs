@@ -40,7 +40,7 @@
     <div class="bottom-footer">
       <div class="footer-social">
         <img src="/img/facebook_icon.avif" alt="facebook" />
-        <img src="/img/facebook_icon.avif" alt="facebook" />
+        <img src="/img/instagram_icon.avif" alt="facebook" />
         <!-- Sociale medie ikoner eller links her -->
       </div>
     </div>
@@ -51,77 +51,86 @@
 </footer>
 
 <style>
-/* Mobil styling */
-.footer-container {
-  padding: 20px;
-  background-color: #f4f4f4;
-}
+  /* Mobil styling */
 
-.footer-main-text h1 {
-  font-size: 1.5rem;
-}
-
-.footer-lines {
-  margin-top: 20px;
-}
-
-.footer-lines div {
-  margin-bottom: 20px;
-}
-
-.footer-lines h2 {
-  font-size: 1.2rem;
-}
-
-.footer-lines p {
-  font-size: 1rem;
-}
-
-.footer-social {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 20px;
-}
-
-.footer-social img {
-  width: 30px;
-  height: 30px;
-}
-
-.footer-bottom {
-  text-align: center;
-  margin-top: 20px;
-}
-
-.footer-bottom p {
-  font-size: 0.8rem;
-}
-
-/* Tablet og desktop styling */
-@media only screen and (min-width: 768px) {
+  h2 {
+    font-family: "font_h2";
+    font-weight: bold;
+  }
+  p {
+    font-family: "font_p";
+  }
   .footer-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start;
+    padding: 20px;
+    background-color: #f4f4f4;
   }
 
-  .footer-main-text {
-    flex: 1;
-    margin-right: 20px;
+  .footer-main-text h1 {
+    font-size: 3rem;
+    font-family: "font_h1";
   }
 
   .footer-lines {
-    flex: 1;
-    margin-right: 20px;
+    margin-top: 20px;
+  }
+
+  .footer-lines div {
+    margin-bottom: 20px;
+  }
+
+  .footer-lines h2 {
+    font-size: 1.5rem;
+  }
+
+  .footer-lines p {
+    font-size: 1.2rem;
   }
 
   .footer-social {
-    flex: 1;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+
+  .footer-social img {
+    width: 30px;
+    height: 30px;
   }
 
   .footer-bottom {
-    flex-basis: 100%;
+    text-align: center;
+    margin-top: 20px;
   }
-}
+
+  .footer-bottom p {
+    font-size: 0.8rem;
+  }
+
+  /* Tablet og desktop styling */
+  @media only screen and (min-width: 768px) {
+    .footer-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .footer-main-text {
+      flex: 1;
+      margin-right: 20px;
+    }
+
+    .footer-lines {
+      flex: 1;
+      margin-right: 20px;
+    }
+
+    .footer-social {
+      flex: 1;
+    }
+
+    .footer-bottom {
+      flex-basis: 100%;
+    }
+  }
 </style>
