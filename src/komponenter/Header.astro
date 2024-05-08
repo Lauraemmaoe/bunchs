@@ -1,0 +1,118 @@
+<div class="container">
+  <nav class="menu">
+    <div class="inner">
+      <ul>
+        <li><a href="/menu">Menu</a></li>
+        <li><a href="/book">Book</a></li>
+        <li><a href="/events">Events</a></li>
+        <li><a href="/gallary">Gallery</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="burger-icon">&#9776;</div>
+</div>
+
+<style>
+  .menu ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .menu ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .container {
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Tilføjet relativ position til container */
+  }
+
+  .burger-icon {
+    display: block;
+    cursor: pointer;
+    font-size: 60px;
+    color: #232188;
+  }
+  .burger-icon {
+    display: flex;
+    justify-content: end;
+    position: relative;
+    z-index: 100;
+  }
+
+  .menu {
+    background-color: #9db999;
+    background-size: cover;
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 50;
+  }
+
+  .menu.active {
+    display: block;
+  }
+
+  .menu a {
+    text-decoration: none;
+    text-align: center;
+    font-size: 2rem;
+    padding-top: 50px;
+    display: flex;
+    margin: 20px;
+  }
+  .menu ul li a {
+    text-decoration: none;
+    color: #232188;
+    position: relative;
+    border-bottom: 4px solid transparent;
+    transition: border-color 0.3s ease;
+    margin-left: 200px;
+    margin-right: 200px;
+  }
+
+  .menu ul li a:hover {
+    border-bottom-color: #232188;
+    color: #f5f2e8;
+  }
+
+  @media only screen and (min-width: 768px) {
+    .menu {
+      display: flex;
+      justify-content: center;
+      background-color: #f5f2e8;
+    }
+    .menu ul li a {
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+    .menu ul {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .burger-icon {
+      display: none; /* Skjul burgerikonet på desktop */
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const burgerIcon = document.querySelector(".burger-icon");
+    const menu = document.querySelector(".container .menu");
+
+    burgerIcon.addEventListener("click", function () {
+      menu.classList.toggle("active");
+      burgerIcon.classList.toggle("active");
+    });
+  });
+</script>
