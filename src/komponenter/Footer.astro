@@ -3,6 +3,9 @@
 ---
 
 <footer>
+  <div class="footer-wine-line">
+    <img src="/img/footer_wine.avif" alt="" />
+  </div>
   <div class="footer-container">
     <div class="footer-main-text">
       <h1>Got any questions?</h1>
@@ -11,126 +14,167 @@
       <div>
         <h2>Brunchs Winebar</h2>
         <p>
-          H.C Ørsteds Vej 50A, st. 4 <br />
-           1879, Frederiksberg C
+          <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=H.C%20Ørsteds%20Vej%2050A%2C%20st.%204%2C%201879%20Frederiksberg%20C" target="_blank">
+            H.C Ørsteds Vej 50A, st. 4 <br />
+             1879, Frederiksberg C
+          </a>
         </p>
       </div>
+
       <div>
         <h2>Opening hours</h2>
+
+        <p>
+          Monday: Closed <br />
+           Tuesday: Closed <br />
+           Wednesday: 16-22 <br />
+           Thursday: 16-22 <br />
+           Friday: 16-22 <br />
+           Saturday: 16-22 <br />
+           Sunday: Closed
+        </p>
       </div>
-      <p>
-        Monday: Closed <br />
-         Tuesday: Closed <br />
-         Wednesday: 16-22 <br />
-         Thursday: 16-22 <br />
-         Friday: 16-22 <br />
-         Saturday: 16-22 <br />
-         Sunday: Closed
-      </p>
+
+      <div>
+        <h2>Contact information</h2>
+        <div>
+          <p>
+            Telefon: <a class="contact-link" href="tel:+4523849560">+45 23849560</a>
+            <br />
+             Email: <a class="contact-link" href="mailto:mads.bunch@gmail.com">mads.bunch@gmail.com</a>
+            <br />
+             Se smiley kontralrapport
+          </p>
+        </div>
+      </div>
     </div>
-    <div>
-      <h2>Contact information</h2>
-      <p>
-        Telefon: +45 23849560 <br />
-         Email: mads.bunch@gmail.com <br />
-         Se smiley kontralrapport
-      </p>
-    </div>
+    <div class="border"></div>
 
     <div class="bottom-footer">
       <div class="footer-social">
-        <img src="/img/facebook_icon.avif" alt="facebook" />
-        <img src="/img/instagram_icon.avif" alt="facebook" />
-        <!-- Sociale medie ikoner eller links her -->
+        <a href="https://www.facebook.com/profile.php?id=61551368044436">
+          <img src="/img/facebook_icon.avif" alt="Facebook" />
+        </a>
+        <a href="https://www.instagram.com/bunchs.vinbar/">
+          <img src="/img/instagram_icon.avif" alt="Instagram" />
+        </a>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Bunchs Winebar . Alle rettigheder forbeholdt.</p>
       </div>
     </div>
-    <div class="footer-bottom">
-      <p>&copy; 2024 Bunchs Winebar . Alle rettigheder forbeholdt.</p>
-    </div>
   </div>
-</footer>
 
-<style>
-  /* Mobil styling */
+  <style>
+    /* Mobil styling */
 
-  h2 {
-    font-family: "font_h2";
-    font-weight: bold;
-  }
-  p {
-    font-family: "font_p";
-  }
-  .footer-container {
-    padding: 20px;
-    background-color: #f4f4f4;
-  }
-
-  .footer-main-text h1 {
-    font-size: 3rem;
-    font-family: "font_h1";
-  }
-
-  .footer-lines {
-    margin-top: 20px;
-  }
-
-  .footer-lines div {
-    margin-bottom: 20px;
-  }
-
-  .footer-lines h2 {
-    font-size: 1.5rem;
-  }
-
-  .footer-lines p {
-    font-size: 1.2rem;
-  }
-
-  .footer-social {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
-  }
-
-  .footer-social img {
-    width: 30px;
-    height: 30px;
-  }
-
-  .footer-bottom {
-    text-align: center;
-    margin-top: 20px;
-  }
-
-  .footer-bottom p {
-    font-size: 0.8rem;
-  }
-
-  /* Tablet og desktop styling */
-  @media only screen and (min-width: 768px) {
     .footer-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: flex-start;
+      background-color: #9db999;
+    }
+    .footer-wine-line img {
+      max-width: 100%;
+      height: auto;
+    }
+    .map-link {
+      color: #000;
+      transition: color 0.3s;
     }
 
-    .footer-main-text {
-      flex: 1;
-      margin-right: 20px;
+    .map-link:hover {
+      color: rgb(20, 20, 158);
+    }
+    .contact-link {
+      color: #000;
+      transition: color 0.3s;
+    }
+
+    .contact-link:hover {
+      color: rgb(20, 20, 158);
+    }
+
+    h2 {
+      font-family: "font_h2";
+      font-weight: bolder;
+    }
+    p {
+      font-family: "font_p";
+    }
+    .footer-container {
+      padding: 20px;
+    }
+
+    .footer-main-text h1 {
+      font-size: 3.3rem;
+      font-family: "font_h1";
     }
 
     .footer-lines {
-      flex: 1;
-      margin-right: 20px;
+      margin-top: 20px;
+    }
+
+    .footer-lines h2 {
+      font-size: 1.7rem;
+    }
+
+    .footer-lines p {
+      font-size: 1.2rem;
+      padding-left: 10px;
     }
 
     .footer-social {
-      flex: 1;
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .footer-social img {
+      width: 40px;
+      height: 40px;
+      padding: 20px;
     }
 
     .footer-bottom {
-      flex-basis: 100%;
+      text-align: center;
+      margin-top: 20px;
     }
-  }
-</style>
+
+    .footer-bottom p {
+      font-size: 0.8rem;
+    }
+    .border {
+      border-bottom: 1px solid #000;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+    .footer-social a img {
+      transition: transform 0.3s ease;
+    }
+
+    .footer-social a img:hover {
+      transform: scale(1.3);
+    }
+
+    /* Tablet og desktop styling */
+    @media only screen and (min-width: 800px) {
+      .footer-lines {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20%;
+      }
+      h1 {
+        margin-left: 20px;
+      }
+      .footer-lines {
+        margin-left: 40px;
+      }
+
+      .footer-bottom {
+        flex-basis: 100%;
+      }
+      .footer-social img {
+        width: 50px;
+        height: 50px;
+      }
+    }
+  </style>
+</footer>
