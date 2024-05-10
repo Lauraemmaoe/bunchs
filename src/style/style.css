@@ -10,3 +10,20 @@
   font-family: "font_p";
   src: url(/public/fonts/alegreya_sans/alegreya-sans-latin-100-normal.woff) format("woff");
 }
+
+h1 {
+  font-family: "font_h1";
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-family: "font_h2";
+  font-size: 1.5rem;
+}
+p {
+  font-family: "font_p";
+  font-size: 1.2rem;
+}
+body {
+  background-color: #f5f2e8;
+}
