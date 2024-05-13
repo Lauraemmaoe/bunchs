@@ -6,10 +6,56 @@ import AppertizersButton from "../komponenter/AppetizersButton.astro";
 import "../style/style.css";
 ---
 
-<div>
-  <h1>Check out our menu,</h1>
-</div>
+<body>
+  <Header />
+  <div>
+    <h1>Check out our menu,</h1>
+  </div>
+  <div class="menu_illustration">
+    <img src="/img/menu_illustration.png" alt="" />
+  </div>
 
-<WineButton />
-<AppertizersButton />
+  <p>Indulge in a delightful selection of wines perfectly paired with delectable appetizers. <br />From artisanal cheeses to savory charcuterie, our menu offers a tantalizing array of flavors to complement your wine experience.</p>
+  <p>Explore our offerings and treat your palate to a journey of taste sensations at our winebar!</p>
+
+  <div class="bottom_menu_1">
+    <a href="wine.astro">
+      <WineButton />
+    </a>
+  </div>
+  <div class="bottom_menu_2">
+    <a href="appetizers.astro">
+      <AppertizersButton />
+    </a>
+  </div>
+
+  <img src="pic_trulli.jpg" alt="Forside billede" />
+</body>
+
 <Footer />
+
+<style>
+  .menu_illustration img {
+    max-width: 100%;
+    height: auto;
+    margin-left: 52%;
+  }
+  p {
+    margin-left: 10px;
+    margin-top: 40px;
+  }
+  h1 {
+    margin-top: 60px;
+    margin-left: 10px;
+  }
+
+  .bottom_menu_1 {
+    padding-left: 37%;
+    padding-top: 10%;
+    padding-bottom: 10%;
+  }
+  .bottom_menu_2 {
+    padding-left: 32%;
+    padding-bottom: 20%;
+  }
+</style>
