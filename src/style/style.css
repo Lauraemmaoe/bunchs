@@ -1,6 +1,7 @@
 @font-face {
   font-family: "font_h1";
-  src: url(/public/fonts/dm_seriftext/dm-serif-text-latin-400-normal.woff) format("woff");
+  src: url(/public/fonts/dm_seriftext/dm-serif-text-latin-400-normal.woff)
+    format("woff");
 }
 @font-face {
   font-family: "font_h2";
@@ -8,7 +9,8 @@
 }
 @font-face {
   font-family: "font_p";
-  src: url(/public/fonts/alegreya_sans/alegreya-sans-latin-100-normal.woff) format("woff");
+  src: url(/public/fonts/alegreya_sans/alegreya-sans-latin-100-normal.woff)
+    format("woff");
 }
 
 h1 {
