@@ -13,11 +13,11 @@ import "../style/style.css";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
+    <title>Forside</title>
   </head>
   <body>
     <div class="forside_wine">
-      <img src="/img/forside_wine.avif" alt="" />
+      <img src="/svg/bigbottle.svg" alt="" />
     </div>
     <div class="forside_intro">
       <h1>Welcome to,</h1>
@@ -26,9 +26,7 @@ import "../style/style.css";
     </div>
 
     <div class="menu_bottom">
-      <a href="menu.astro">
-        <MenuButton />
-      </a>
+      <MenuButton />
     </div>
 
     <div id="forside_intro_grid">
@@ -52,20 +50,18 @@ import "../style/style.css";
     </div>
 
     <div class="forside_illustrationer">
-      <img src="/img/forside_illustrationer.webp" alt="" />
-    </div>
-    <div class="forside_illustrationer_2">
-      <img src="/img/forside_illustrationer.webp" alt="" />
+      <img src="/svg/glass1.svg" alt="" />
+      <img src="/svg/forkspoon.svg" alt="" />
     </div>
 
     <img src="pic_trulli.jpg" alt="Forside billede" />
 
     <div id="forside_intro_grid">
-      <div class="lys_illustration">
-        <img src="/img/lys_illustration.avif" alt="" />
-      </div>
       <div id="column-left">
         <div id="forside_intro_2">
+          <div class="lys_illustration">
+            <img src="/svg/candle.svg" alt="" />
+          </div>
           <h1>Stop by,</h1>
           <h2>. . . and enjoy a good glass of natural wine.</h2>
 
@@ -107,7 +103,7 @@ import "../style/style.css";
 <style>
   /* Mobil styling */
   .forside_wine img {
-    max-width: 80%;
+    max-width: 90%;
     height: auto;
     margin-top: 50px;
     margin-left: 80px;
@@ -122,8 +118,11 @@ import "../style/style.css";
     margin-left: 10px;
     margin-right: 10px;
   }
-  .forside_illustrationer {
-    margin-left: 20px;
+
+  .forside_illustrationer img {
+    margin-left: 20%;
+    max-width: 50%;
+    margin-top: 10%;
   }
   .lys_illustration img {
     max-width: 100%;
@@ -143,16 +142,7 @@ import "../style/style.css";
     height: 40px;
     padding: 20px;
   }
-
-  .sociale_medier_icon a img {
-    transition: transform 0.3s ease;
-  }
-
-  .sociale_medier_icon a img:hover {
-    transform: scale(1.3);
-  }
-
-  .forside_illustrationer_2 {
+  .lys_illustration {
     display: none;
   }
 
@@ -203,21 +193,25 @@ import "../style/style.css";
     #column-right {
       grid-column: 1;
     }
-    .forside_illustrationer {
-      display: none;
+    .forside_illustrationer img {
+      max-width: 20%;
+      margin-top: 5%;
     }
+
     .book_bottom {
       margin-left: 1%;
     }
 
-    .lys_illustration img {
-      margin-left: 175%;
-      margin-bottom: 40%;
-      margin-top: 0;
+    .lys_illustration {
+      max-width: 60%;
     }
+
     .sociale_medier h1 {
       text-align: center;
       margin-top: 15%;
+    }
+    .lys_illustration {
+      display: block;
     }
   }
 </style>
