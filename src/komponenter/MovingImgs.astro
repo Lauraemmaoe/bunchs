@@ -1,0 +1,56 @@
+---
+
+---
+
+<div class="moving_frames">
+
+    <div class=""><img src="/public/img/dog.png" alt=""></div>
+
+    <div class=""><img src="/public/img/dog.png" alt=""></div>
+
+    <div class=""><img src="/public/img/dog.png" alt=""></div>
+
+    <div class=""><img src="/public/img/dog.png" alt=""></div>
+
+
+
+</div>
+
+   
+<style>
+
+
+
+    .moving_frames {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 2px;
+    
+    }
+    
+    .moving_frames img {
+        width: 100%;
+        height: auto;
+    
+   
+    }
+
+    .moving_frames {
+        position: relative; 
+        animation: moveLeft 20s linear infinite;
+        width: 100%;
+    }
+
+
+    @keyframes moveLeft {
+        from {
+            transform: translateX(-20);
+        }
+        to {
+            transform: translateX(-900px); /* Adjust the distance as needed */
+        }
+    }
+
+
+</style>
+
