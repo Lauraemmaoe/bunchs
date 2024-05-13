@@ -16,7 +16,6 @@ import "../style/style.css";
     <title>Astro</title>
   </head>
   <body>
-    <Header />
     <div class="forside_wine">
       <img src="/img/forside_wine.avif" alt="" />
     </div>
@@ -25,56 +24,70 @@ import "../style/style.css";
       <h2>Bunchs WINEBAR - an artsy oasis</h2>
       <p>located in the heart of Frederiksberg.</p>
     </div>
-    <Bottom />
-    <MenuButton />
 
-    <img src="pic_trulli.jpg" alt="Forside billede" />
-
-    <div id="forside_intro_2">
-      <h1>We are an,</h1>
-      <h2>. . . art-inspired wine bar with good, honest organic/biodynamic wine at great prices in cozy surroundings.</h2>
-      <p>
-        Bunch's Wine Bar is located at H.C Ørsteds Vej 50A, st. 4. in Frederiksberg. You can keep up with events on Instagram and Facebook. <br />
-        <br />
-         In our wine bar, we offer wine tastings for both private individuals and corporate clients, and we have a wide selection of natural wines. Therefore, you'll be able to taste wines that you can't find anywhere else. <br />
-        <br />We have 12 different wines by the glass (bubbles, red, white & orange) - also full bottles. <br /> If you feel like having a little bite to eat with us, we have several different small dishes on the menu, including anchovies, burrata, pâté, serrano ham, and more.
-      </p>
+    <div class="menu_bottom">
+      <a href="menu.astro">
+        <MenuButton />
+      </a>
     </div>
-    <Bottom />
+
+    <div id="forside_intro_grid">
+      <div id="column-left">
+        <img src="pic_trulli.jpg" alt="Forside billede" />
+        <img src="pic_trulli.jpg" alt="Forside billede" />
+      </div>
+      <div id="column-right">
+        <div id="forside_intro_2">
+          <h1>We are an,</h1>
+          <h2>. . . art-inspired wine bar with good, honest organic/biodynamic wine at great prices in cozy surroundings.</h2>
+          <p>
+            Bunch's Wine Bar is located at H.C Ørsteds Vej 50A, st. 4. in Frederiksberg. You can keep up with events on Instagram and Facebook. <br />
+            <br />
+             In our wine bar, we offer wine tastings for both private individuals and corporate clients, and we have a wide selection of natural wines. Therefore, you'll be able to taste wines that you can't find anywhere else. <br />
+            <br />We have 12 different wines by the glass (bubbles, red, white & orange) - also full bottles. <br /> If you feel like having a little bite to eat with us, we have several different small dishes on the menu, including anchovies, burrata, pâté, serrano ham, and more.
+          </p>
+          <Bottom />
+        </div>
+      </div>
+    </div>
 
     <div class="forside_illustrationer">
+      <img src="/img/forside_illustrationer.webp" alt="" />
+    </div>
+    <div class="forside_illustrationer_2">
       <img src="/img/forside_illustrationer.webp" alt="" />
     </div>
 
     <img src="pic_trulli.jpg" alt="Forside billede" />
 
-    <div id="forside_intro_2">
-      <h1>Stop by,</h1>
-      <h2>. . . and enjoy a good glass of natural wine.</h2>
-      <p>
-        Whether you're looking to savor a fine glass of wine before your meal or eager to sample a variety of wines with a group of family members, friends, or colleagues, our wine bar is definitely worth a visit. <br />
-        <br />
-         Here, you can indulge in our exclusive selection of natural wines, unavailable elsewhere, which go beyond just conventional wines. <br />
-      </p>
+    <div id="forside_intro_grid">
+      <div class="lys_illustration">
+        <img src="/img/lys_illustration.avif" alt="" />
+      </div>
+      <div id="column-left">
+        <div id="forside_intro_2">
+          <h1>Stop by,</h1>
+          <h2>. . . and enjoy a good glass of natural wine.</h2>
+
+          <p>Whether you're looking to savor a fine glass of wine before <br />your meal or eager to sample a variety of wines with a group <br />of family members, friends, or colleagues, our wine bar is definitely worth a visit.</p>
+          <p>Here, you can indulge in our exclusive selection of natural wines, unavailable elsewhere, which go beyond just conventional wines.</p>
+        </div>
+        <div id="forside_intro_2">
+          <h1>Moreover,</h1>
+          <p>We regularly hold wine tastings and other events in the wine bar with plenty of entertainment, such as readings, live music, and more. You can keep up with upcoming events on our website or Instagram and Facebook.</p>
+        </div>
+
+        <div class="book_bottom">
+          <BookButton />
+        </div>
+      </div>
+      <div id="column-right">
+        <img src="pic_trulli.jpg" alt="Forside billede" />
+        <img src="pic_trulli.jpg" alt="Forside billede" />
+      </div>
     </div>
 
-    <BookButton />
-
-    <img src="pic_trulli.jpg" alt="Forside billede" />
-
-    <div id="forside_intro_2">
-      <h1>Moreover,</h1>
-      <p>
-        we regularly hold wine tastings and other events in the wine bar with plenty of entertainment, such as readings, live music, and more. <br />
-        <br />
-
-         You can keep up with upcoming events on our website or Instagram and Facebook.
-      </p>
-    </div>
     <Bottom />
-    <div class="lys_illustration">
-      <img src="/img/lys_illustration.avif" alt="" />
-    </div>
 
     <div class="sociale_medier">
       <h1>Follow us on social media!</h1>
@@ -115,7 +128,8 @@ import "../style/style.css";
   .lys_illustration img {
     max-width: 100%;
     height: auto;
-    margin-left: 270px;
+    margin-left: 70%;
+    margin-top: 20%;
   }
 
   .sociale_medier_icon {
@@ -138,7 +152,72 @@ import "../style/style.css";
     transform: scale(1.3);
   }
 
+  .forside_illustrationer_2 {
+    display: none;
+  }
+
   /* Tablet og desktop styling */
   @media only screen and (min-width: 800px) {
+    .forside_intro {
+      line-height: 1;
+      margin-left: 7%;
+      margin-top: -10%;
+      position: relative;
+      z-index: 1;
+    }
+
+    .forside_wine img {
+      max-width: 70%;
+      height: auto;
+      margin-top: 10%;
+      margin-left: 35%;
+      position: relative;
+      z-index: 0;
+    }
+
+    .forside_intro h1 {
+      font-size: 4rem;
+    }
+    .forside_intro h2 {
+      font-size: 2.5rem;
+    }
+    .forside_intro p {
+      font-size: 2rem;
+    }
+    .menu_bottom {
+      margin-left: 8%;
+    }
+    #forside_intro_grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin-top: 11%;
+      line-height: 1;
+      margin-left: 5%;
+    }
+
+    #column-left {
+      grid-column: 2;
+    }
+
+    #column-right {
+      grid-column: 1;
+    }
+    .forside_illustrationer {
+      display: none;
+    }
+    .book_bottom {
+      margin-left: 1%;
+    }
+
+    .lys_illustration img {
+      margin-left: 175%;
+      margin-bottom: 40%;
+      margin-top: 0;
+    }
+    .sociale_medier h1 {
+      text-align: center;
+      margin-top: 15%;
+    }
   }
 </style>
