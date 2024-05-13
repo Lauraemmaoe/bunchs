@@ -1,0 +1,47 @@
+---
+
+---
+
+<section>
+  <div class="grid_poster1">
+    <img src="/img/poster1.png" alt="poster1" />
+    <img src="/img/poster1.png" alt="poster1" />
+    <img src="/img/poster1.png" alt="poster1" />
+  </div>
+
+  <div class="grid_poster1">
+    <img src="/img/poster1.png" alt="poster1" />
+    <img src="/img/poster1.png" alt="poster1" />
+    <img src="/img/poster1.png" alt="poster1" />
+  </div>
+</section>
+<style>
+  .grid_poster1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .grid_poster1 img {
+    margin: 0; /* Fjerner mellemrum mellem billederne */
+    max-width: 100%; /* Gør billederne responsive */
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease; /* Tilføjer en glat overgangseffekt */
+  }
+
+  .grid_poster1 img:hover {
+    transform: scale(1.1); /* Ændrer skalaen af billedet til 110% på hover */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Tilføjer en skyggeeffekt på hover */
+  }
+
+  section {
+    display: grid;
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  section > img {
+    grid-area: 1/3;
+    align-self: start;
+  }
+</style>
