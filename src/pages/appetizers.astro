@@ -1,12 +1,9 @@
 ---
-import Footer from "../komponenter/Footer.astro";
-import Header from "../komponenter/Header.astro";
 import "../style/style.css";
 import MainLayout from "../layout/MainLayout.astro";
 ---
 
-<body>
-  <Header />
+<MainLayout>
   <div class="ost_illustration">
     <img src="/svg/cheese.svg" alt="" />
   </div>
@@ -18,8 +15,7 @@ import MainLayout from "../layout/MainLayout.astro";
   <div class="card_grid">
     <p>'Ask the staff for any allergies'</p>
   </div>
-  <Footer />
-</body>
+</MainLayout>
 
 <style>
   h1 {

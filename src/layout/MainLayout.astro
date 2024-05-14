@@ -1,14 +1,23 @@
 ---
-
+import Footer from "../komponenter/Footer.astro";
+import Header from "../komponenter/Header.astro";
 ---
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="robots" content="noindex" />
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/" />
+    <link rel="manifest" href="/site.webmanifest" />
+  </head>
+  <body>
+    <Header />
 
-  <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/" />
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/" />
-  <link rel="manifest" href="/site.webmanifest" />
-</head>
+    <slot />
+    <Footer />
+  </body>
+</html>

@@ -1,174 +1,154 @@
 ---
-import Footer from "../komponenter/Footer.astro";
 import MainLayout from "../layout/MainLayout.astro";
 import "../style/style.css";
 import BookEventsButton from "../komponenter/BookEventsButton.astro";
 import Some from "../komponenter/Some.astro";
 import NewsletterButton from "../komponenter/NewsletterButton.astro";
 import Poster from "../komponenter/Poster.astro";
-import Header from "../komponenter/Header.astro";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
-  </head>
-  <body>
-    <Header />
-    <div class="grid_event1">
-      <div class="grid_event1_1">
-        <img src="/" alt="" />
+<MainLayout>
+  <div class="grid_event1">
+    <div class="grid_event1_1">
+      <img src="/" alt="" />
+    </div>
+    <div class="grid_event1_2">
+      <h1>Indulge in,</h1>
+      <p>.. the Magic of Music, Words, and Wine Tasting at Bunchs Wine Bar!</p>
+      <div class="glass">
+        <img src="/svg/glass2.svg" alt="wineglass" />
       </div>
-      <div class="grid_event1_2">
-        <h1>Indulge in,</h1>
-        <p>.. the Magic of Music, Words, and Wine Tasting at Bunchs Wine Bar!</p>
-        <div class="glass">
-          <img src="/svg/glass2.svg" alt="wineglass" />
+    </div>
+  </div>
+
+  <div class="grid_event2">
+    <div class="grid_event2_1">
+      <h1>Upcoming events</h1>
+      <p>Discover our cultural events at Bunchs Wine Bar!</p>
+      <p>Join us for our organic and biodynamic wines alongside atmospheric jazz evenings and engaging literary readings.</p>
+      <p>Experience the magic of music and words in our cozy atmosphere. We look forward to welcoming you to unforgettable cultural experiences!</p>
+      <div class="book">
+        <BookEventsButton />
+      </div>
+    </div>
+    <div class="grid_event2_2">
+      <img src="/svg/music.svg" alt="recordplayer" />
+    </div>
+  </div>
+  <Poster />
+
+  <div class="grid_event3">
+    <div class="grid_event3_1">
+      <h1>If you have FOMO,</h1>
+
+      <p>.. then keep yourself updated on the latest news and events on our social media platforms or sign up for our newsletter to ensure you never miss out on the excitement.</p>
+      <br />
+      <h1>Book the entire bar!</h1>
+      <p>Celebrating a birthday or other special occasion? Write us via email and we will tailor the perfect offer for you.</p>
+      <p>Stay in the loop with Bunchs Wine Bar.</p>
+
+      <p>.. then keep yourself updated on the latest news and events on our social media platforms or sign up for our newsletter</p>
+      <p>to ensure you never miss out on the excitement.</p>
+      <p>Stay in the loop with Bunchs Wine Bar</p>
+
+      <div class="grid_knap0">
+        <div class="grid_knap1">
+          <Some />
+        </div>
+        <div class="grid_knap2">
+          <NewsletterButton />
         </div>
       </div>
     </div>
 
-    <div class="grid_event2">
-      <div class="grid_event2_1">
-        <h1>Upcoming events</h1>
-        <p>Discover our cultural events at Bunchs Wine Bar!</p>
-        <p>Join us for our organic and biodynamic wines alongside atmospheric jazz evenings and engaging literary readings.</p>
-        <p>Experience the magic of music and words in our cozy atmosphere. We look forward to welcoming you to unforgettable cultural experiences!</p>
-        <div class="book">
-          <BookEventsButton />
-        </div>
-      </div>
-      <div class="grid_event2_2">
-        <img src="/svg/music.svg" alt="recordplayer" />
-      </div>
+    <div class="grid_event3_2">
+      <img src="/svg/heartwine.svg" alt="wineglass" />
     </div>
-    <Poster />
+  </div>
+</MainLayout>
 
-    <div class="grid_event3">
-      <div class="grid_event3_1">
-        <h1>If you have FOMO,</h1>
-<<<<<<< HEAD
-        <p>
-          .. then keep yourself updated on the latest news and events on our
-          social media platforms or sign up for our newsletter to ensure you never miss out on the excitement.
-        </p>
-        <br>
-        <h1>Book the entire bar!</h1>
-        <p>
-          Celebrating a birthday or other special occasion? Write us via email and we will tailor the perfect offer for you.
-        </p>
-        <p>Stay in the loop with Bunchs Wine Bar.</p>
-    
-=======
-        <p>.. then keep yourself updated on the latest news and events on our social media platforms or sign up for our newsletter</p>
-        <p>to ensure you never miss out on the excitement.</p>
-        <p>Stay in the loop with Bunchs Wine Bar</p>
->>>>>>> mainlayout
-        <div class="grid_knap0">
-          <div class="grid_knap1">
-            <Some />
-          </div>
-          <div class="grid_knap2">
-            <NewsletterButton />
-          </div>
-        </div>
-      </div>
+<style>
+  /* mobilesize*/
+  img {
+    max-width: 50%;
+    height: auto;
+    display: block; /* Skifter display til blok, så det kan centreres */
+    margin: 0 auto;
+  }
 
-      <div class="grid_event3_2">
-        <img src="/svg/heartwine.svg" alt="wineglass" />
-      </div>
-    </div>
+  .glass {
+    border-bottom: 7px solid #232188;
+    padding-bottom: 80px;
+    position: relative;
+  }
 
-    <Footer />
-  </body>
+  .glass img {
+    width: 100%;
+    display: block;
+    animation: rotateAnimation 2s infinite linear;
+  }
 
-  <style>
-    /* mobilesize*/
-    img {
-      max-width: 50%;
-      height: auto;
-      display: block; /* Skifter display til blok, så det kan centreres */
-      margin: 0 auto;
+  @keyframes rotateAnimation {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(5deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+
+  .grid_knap1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+  }
+  .grid_knap2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .book {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+    padding-top: 20px;
+  }
+
+  /* desktop*/
+  @media only screen and (min-width: 800px) {
+    .grid_event1 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin-top: 100px;
+    }
+    .grid_event2 {
+      padding-top: 50px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding-bottom: 50px;
+    }
+    .grid_event3 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
     }
 
-    .glass {
-      border-bottom: 7px solid #232188;
-      padding-bottom: 80px;
-      position: relative;
+    .grid_event3_2 {
+      max-width: 90%;
+      padding-left: 100px;
     }
 
+    .grid_knap0 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
     .glass img {
-      width: 100%;
-      display: block;
-      animation: rotateAnimation 2s infinite linear;
+      max-width: 35%;
     }
-
-    @keyframes rotateAnimation {
-      0% {
-        transform: rotate(0deg);
-      }
-      50% {
-        transform: rotate(5deg);
-      }
-      100% {
-        transform: rotate(0deg);
-      }
-    }
-
-    .grid_knap1 {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding-bottom: 20px;
-    }
-    .grid_knap2 {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .book {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding-bottom: 20px;
-      padding-top: 20px;
-    }
-
-    /* desktop*/
-    @media only screen and (min-width: 800px) {
-      .grid_event1 {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        margin-top: 100px;
-      }
-      .grid_event2 {
-        padding-top: 50px;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        padding-bottom: 50px;
-      }
-      .grid_event3 {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .grid_event3_2 {
-        max-width: 90%;
-        padding-left: 100px;
-      }
-
-      .grid_knap0 {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-      }
-      .glass img {
-        max-width: 35%;
-      }
-    }
-  </style>
-</html>
+  }
+</style>
