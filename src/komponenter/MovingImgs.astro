@@ -2,9 +2,11 @@
 
 ---
 
+<div class="container_movingframes">
+
 <div class="moving_frames">
 
-    <div class=""><img src="/public/img/dog.png" alt=""></div>
+    <section class="first">
 
     <div class=""><img src="/public/img/dog.png" alt=""></div>
 
@@ -12,21 +14,50 @@
 
     <div class=""><img src="/public/img/dog.png" alt=""></div>
 
+    <div class=""><img src="/public/img/dog.png" alt=""></div>
+</section>
 
+<section class="second">
+
+    <div class=""><img src="/public/img/dog.png" alt=""></div>
+
+    <div class=""><img src="/public/img/dog.png" alt=""></div>
+
+    <div class=""><img src="/public/img/dog.png" alt=""></div>
+
+    <div class=""><img src="/public/img/dog.png" alt=""></div>
+</section>
 
 </div>
+
+</div>
+
+
+
 
    
 <style>
 
 
+.container_movingframes {
+    width: 100vw;
+    overflow: hidden;
+}
+
 
     .moving_frames {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        gap: 2px;
+        display: flex;
+        flex-direction: row;
+        width: 200vw;
     
     }
+
+    .first, .second {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+
     
     .moving_frames img {
         width: 100%;
@@ -37,17 +68,17 @@
 
     .moving_frames {
         position: relative; 
-        animation: moveLeft 20s linear infinite;
-        width: 100%;
+        animation: moveLeft 18s linear infinite;
+     
     }
 
 
     @keyframes moveLeft {
         from {
-            transform: translateX(-20);
+            transform: translateX(0);
         }
         to {
-            transform: translateX(-900px); /* Adjust the distance as needed */
+            transform: translateX(-100vw); /* Adjust the distance as needed */
         }
     }
 
