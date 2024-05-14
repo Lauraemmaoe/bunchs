@@ -30,34 +30,50 @@ import MainLayout from "../layout/MainLayout.astro";
 
 <style>
   h1 {
-    font-size: 7rem;
+    font-size: 4rem;
     text-align: center;
     color: #232188;
     border-bottom: 4px solid rgb(0, 0, 0);
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 7%;
+    margin-right: 7%;
   }
   h2 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 
   .wine_menu {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 4%;
+    margin-right: 4%;
   }
   .glass_illustration {
     max-width: 60%;
-    margin-left: 40%;
+    margin-left: 30%;
     margin-top: 5%;
+    margin-bottom: 10%;
   }
 
   /* Tablet og desktop styling */
   @media only screen and (min-width: 800px) {
     h2 {
-      font-size: 3rem;
+      font-size: 2rem;
+    }
+    h1 {
+      margin-top: 15%;
+      font-size: 6rem;
+      margin-left: 15%;
+      margin-right: 15%;
+    }
+    .wine_menu {
+      margin-left: 15%;
+      margin-right: 15%;
+    }
+    .glass_illustration {
+      max-width: 40%;
+      margin-left: 60%;
+      margin-top: 0;
     }
   }
 </style>
