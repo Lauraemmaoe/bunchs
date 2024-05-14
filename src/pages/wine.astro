@@ -5,6 +5,7 @@ import "../style/style.css";
 ---
 
 <body>
+  <Header />
   <div>
     <h1>Bunchs Wines</h1>
   </div>
@@ -24,7 +25,10 @@ import "../style/style.css";
     </div>
   </div>
 
-  <div class="glass_illustration"></div>
+  <div class="glass_illustration">
+    <img src="/svg/glass3.svg" alt="" />
+  </div>
+  <Footer />
 </body>
 
 <style>
@@ -46,5 +50,14 @@ import "../style/style.css";
     align-items: center;
     margin-left: 5%;
     margin-right: 5%;
+  }
+  .glass_illustration {
+    max-width: 60%;
+    margin-left: 40%;
+    margin-top: 5%;
+  }
+
+  /* Tablet og desktop styling */
+  @media only screen and (min-width: 800px) {
   }
 </style>

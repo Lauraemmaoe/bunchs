@@ -1,0 +1,55 @@
+---
+import Footer from "../komponenter/Footer.astro";
+import Header from "../komponenter/Header.astro";
+import "../style/style.css";
+---
+
+<body>
+  <Header />
+  <div class="ost_illustration">
+    <img src="/svg/cheese.svg" alt="" />
+  </div>
+  <h1>Bunchs Appetizers</h1>
+  <div class="gaffel_illustration">
+    <img src="/svg/fork.svg" alt="" />
+  </div>
+
+  <div class="card_grid">
+    <p>'Ask the staff for any allergies'</p>
+  </div>
+  <Footer />
+</body>
+
+<style>
+  h1 {
+    font-size: 7rem;
+    text-align: center;
+    color: #232188;
+    border-bottom: 4px solid rgb(0, 0, 0);
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .ost_illustration {
+    max-width: 30%;
+    margin-left: 10%;
+  }
+
+  .gaffel_illustration img {
+    transform: rotate(-55deg);
+    max-width: 20%;
+    margin-left: 60%;
+  }
+  p {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+  .card_grid {
+    background-color: #fffaf3;
+  }
+
+  /* Tablet og desktop styling */
+  @media only screen and (min-width: 800px) {
+    h1 {
+    }
+  }
+</style>
