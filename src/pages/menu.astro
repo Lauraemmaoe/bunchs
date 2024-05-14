@@ -1,13 +1,11 @@
 ---
-import Footer from "../komponenter/Footer.astro";
-import Header from "../komponenter/Header.astro";
 import WineButton from "../komponenter/WineButton.astro";
 import AppertizersButton from "../komponenter/AppetizersButton.astro";
 import "../style/style.css";
 import MainLayout from "../layout/MainLayout.astro";
 ---
 
-<body>
+<MainLayout>
   <div class="menu_grid">
     <div>
       <h1>Check out our menu,</h1>
@@ -49,8 +47,7 @@ import MainLayout from "../layout/MainLayout.astro";
   </div>
 
   <img src="pic_trulli.jpg" alt="Forside billede" />
-  <Footer />
-</body>
+</MainLayout>
 
 <Footer />
 
