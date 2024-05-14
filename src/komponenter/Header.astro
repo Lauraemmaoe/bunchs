@@ -1,3 +1,7 @@
+---
+import Some from "./Some.astro";
+---
+
 <div class="container">
   <nav class="menu">
     <div class="inner">
@@ -6,6 +10,7 @@
         <li><a href="/book">Book</a></li>
         <li><a href="/events">Events</a></li>
         <li><a href="/gallary">Gallery</a></li>
+        <div class="some"><li><Some /></li></div>
       </ul>
     </div>
   </nav>
@@ -13,130 +18,148 @@
   <div class="burger-icon">&#9776;</div>
 
   <div class="logo">
-    <img src="/svg/logo.svg" alt="poster1" />
+    <a href="index.html">
+      <img src="/svg/logo.svg" alt="poster1" />
+    </a>
   </div>
-</div>
 
-<style>
-  .logo {
-    position: fixed;
-    top: 10px;
-    left: 10px;
-    z-index: 9999;
-
-    padding: 10px 20px;
-  }
-  .logo img {
-    width: 50%;
-  }
-  .menu ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-  }
-
-  .menu ul li {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .container {
-    justify-content: center;
-    align-items: center;
-    position: relative;
-  }
-
-  .burger-icon {
-    display: block;
-    cursor: pointer;
-    position: fixed;
-    font-size: 60px;
-    color: #232188;
-    background-color: #f5f2e8;
-  }
-
-  .container .burger-icon {
-    z-index: 10000000;
-  }
-  .burger-icon {
-    display: flex;
-    justify-content: flex-end; /* Korrekt måde at justere ikonets placering */
-    position: relative;
-    z-index: 100;
-  }
-
-  .menu {
-    background-color: #f5f2e8;
-    background-size: cover;
-    margin: 0px;
-    width: 100%;
-    height: 100%;
-    display: none;
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index: 50;
-    font-family: "font_h2";
-  }
-
-  .menu.active {
-    display: block;
-  }
-
-  .menu a {
-    text-decoration: none;
-    text-align: center;
-    font-size: 2rem;
-    padding-top: 20px;
-    display: flex;
-    margin: 20px;
-  }
-  .menu ul li a {
-    text-decoration: none;
-    color: #232188;
-    position: relative;
-    border-bottom: 4px solid transparent;
-    transition: border-color 0.3s ease;
-    margin-left: 200px;
-    margin-right: 200px;
-  }
-
-  .menu ul li a:hover {
-    border-bottom-color: #232188;
-    color: #9db999;
-  }
-
-  @media only screen and (min-width: 768px) {
-    .menu {
+  <style>
+    .some {
       display: flex;
-      justify-content: flex-end;
-
-      height: auto;
-      font-family: "font_h2";
+      justify-content: center;
+      margin-top: 70px;
     }
-    .menu ul li a {
-      margin-left: 20px;
-      margin-right: 20px;
+    .logo {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      z-index: 9999;
+
+      padding: 10px 20px;
+    }
+    .inner {
+      margin-top: 100px;
+    }
+    .logo img {
+      width: 50%;
     }
     .menu ul {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      padding-top: 100px;
+    }
+
+    .menu ul li {
       display: flex;
-      flex-direction: row;
+      align-items: center;
+    }
+
+    .container {
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .burger-icon {
+      display: block;
+      cursor: pointer;
+      position: fixed;
+      font-size: 60px;
+      color: #232188;
+    }
+
+    .container .burger-icon {
+      z-index: 10000000;
     }
     .burger-icon {
-      display: none;
+      display: flex;
+      justify-content: flex-end; /* Korrekt måde at justere ikonets placering */
+      position: relative;
+      z-index: 100;
     }
-  }
-</style>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const burgerIcon = document.querySelector(".burger-icon");
-    const menu = document.querySelector(".container .menu");
+    .menu {
+      background-color: #f5f2e8;
+      background-size: cover;
+      margin: 0px;
+      width: 100%;
+      height: 100%;
+      display: none;
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 50;
+      font-family: "font_h2";
+    }
 
-    burgerIcon.addEventListener("click", function () {
-      menu.classList.toggle("active");
-      burgerIcon.classList.toggle("active");
+    .menu.active {
+      display: block;
+    }
+
+    .menu a {
+      text-decoration: none;
+      text-align: center;
+      font-size: 2rem;
+      padding-top: 20px;
+      display: flex;
+      margin: 20px;
+    }
+    .menu ul li a {
+      text-decoration: none;
+      color: #232188;
+      position: relative;
+      border-bottom: 4px solid transparent;
+      transition: border-color 0.3s ease;
+      margin-left: 150px;
+      margin-right: 200px;
+    }
+    .menu ul {
+      padding-top: 2px;
+    }
+
+    .menu ul li a:hover {
+      border-bottom-color: #232188;
+      color: #9db999;
+    }
+
+    @media only screen and (min-width: 768px) {
+      .some {
+        display: none;
+      }
+      .inner {
+        margin-top: 10px;
+      }
+      .menu {
+        display: flex;
+        justify-content: flex-end;
+
+        height: auto;
+        font-family: "font_h2";
+      }
+      .menu ul li a {
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+      .menu ul {
+        display: flex;
+        flex-direction: row;
+      }
+      .burger-icon {
+        display: none;
+      }
+    }
+  </style>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const burgerIcon = document.querySelector(".burger-icon");
+      const menu = document.querySelector(".container .menu");
+
+      burgerIcon.addEventListener("click", function () {
+        menu.classList.toggle("active");
+        burgerIcon.classList.toggle("active");
+      });
     });
-  });
-</script>
+  </script>
+</div>
