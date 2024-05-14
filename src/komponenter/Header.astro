@@ -9,10 +9,26 @@
       </ul>
     </div>
   </nav>
+
   <div class="burger-icon">&#9776;</div>
+
+  <div class="logo">
+    <img src="/svg/logo.svg" alt="poster1" />
+  </div>
 </div>
 
 <style>
+  .logo {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 9999;
+
+    padding: 10px 20px;
+  }
+  .logo img {
+    width: 50%;
+  }
   .menu ul {
     padding: 0;
     margin: 0;
@@ -28,24 +44,25 @@
   .container {
     justify-content: center;
     align-items: center;
-    position: relative; /* Tilføjet relativ position til container */
+    position: relative;
   }
 
   .burger-icon {
     display: block;
     cursor: pointer;
+    position: fixed;
     font-size: 60px;
     color: #232188;
   }
   .burger-icon {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end; /* Korrekt måde at justere ikonets placering */
     position: relative;
     z-index: 100;
   }
 
   .menu {
-    background-color: #9db999;
+    background-color: #f5f2e8;
     background-size: cover;
     margin: 0px;
     width: 100%;
@@ -55,6 +72,7 @@
     left: 0;
     top: 0;
     z-index: 50;
+    font-family: "font_h2";
   }
 
   .menu.active {
@@ -65,7 +83,7 @@
     text-decoration: none;
     text-align: center;
     font-size: 2rem;
-    padding-top: 50px;
+    padding-top: 20px;
     display: flex;
     margin: 20px;
   }
@@ -81,14 +99,16 @@
 
   .menu ul li a:hover {
     border-bottom-color: #232188;
-    color: #f5f2e8;
+    color: #9db999;
   }
 
   @media only screen and (min-width: 768px) {
     .menu {
       display: flex;
-      justify-content: center;
-      background-color: #f5f2e8;
+      justify-content: flex-end;
+
+      height: auto;
+      font-family: "font_h2";
     }
     .menu ul li a {
       margin-left: 20px;
@@ -99,7 +119,7 @@
       flex-direction: row;
     }
     .burger-icon {
-      display: none; /* Skjul burgerikonet på desktop */
+      display: none;
     }
   }
 </style>
