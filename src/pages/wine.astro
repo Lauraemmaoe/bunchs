@@ -1,0 +1,50 @@
+---
+import Footer from "../komponenter/Footer.astro";
+import Header from "../komponenter/Header.astro";
+import "../style/style.css";
+---
+
+<body>
+  <div>
+    <h1>Bunchs Wines</h1>
+  </div>
+
+  <div class="wine_menu">
+    <div>
+      <h2>SPARKLING</h2>
+    </div>
+    <div>
+      <h2>WHITE</h2>
+    </div>
+    <div>
+      <h2>ORANGE</h2>
+    </div>
+    <div>
+      <h2>RED</h2>
+    </div>
+  </div>
+
+  <div class="glass_illustration"></div>
+</body>
+
+<style>
+  h1 {
+    font-size: 7rem;
+    text-align: center;
+    color: #232188;
+    border-bottom: 4px solid rgb(0, 0, 0);
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  h2 {
+    font-size: 2.6rem;
+  }
+
+  .wine_menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+</style>
