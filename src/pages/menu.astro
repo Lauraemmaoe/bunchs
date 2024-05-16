@@ -6,6 +6,7 @@ import MainLayout from "../layout/MainLayout.astro";
 ---
 
 <MainLayout>
+  <div class="main_grid_menu">
   <div class="menu_grid">
     <div class="menu_text">
       <h1>Check out our menu,</h1>
@@ -13,11 +14,12 @@ import MainLayout from "../layout/MainLayout.astro";
         Indulge in a delightful selection of wines perfectly paired with delectable appetizers. <br />From artisanal cheeses to savory charcuterie, our menu offers a tantalizing array of flavors to complement your wine experience. <br />Explore our offerings and treat your palate to a journey of taste sensations at our winebar!
       </p>
     </div>
+  
     <div class="menu_illustration">
       <img src="/svg/twowineglass.svg" alt="" />
     </div>
   </div>
-
+</div>
   <div class="bottoms_menu">
     <div class="bottom_menu_1">
       <a href="wine.astro">
@@ -35,6 +37,8 @@ import MainLayout from "../layout/MainLayout.astro";
 </MainLayout>
 
 <style>
+
+
   .menu_illustration img {
     max-width: 100%;
     height: auto;
@@ -49,36 +53,66 @@ import MainLayout from "../layout/MainLayout.astro";
     margin-left: 10px;
   }
 
-  /* Tablet og desktop styling */
-
-  @media only screen and (min-width: 800px) {
-    .bottoms_menu {
-      display: flex;
-      justify-content: center;
+  .bottoms_menu {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      text-align: center;
+      width: 100%;
     }
 
     .bottom_menu_1,
     .bottom_menu_2 {
-      width: 40%;
       margin-top: 10%; /* Juster efter behov */
     }
+
+ 
+
+  /* Tablet og desktop styling */
+
+  @media only screen and (min-width: 800px) {
+    .bottoms_menu {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      text-align: center
+    }
+
 
     h1 {
       font-size: 4rem;
     }
 
+
+  
+
+    .main_grid_menu {
+    display: flex;
+    flex-direction: column;
+} 
+
     .menu_grid {
       margin-top: 10%;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
+  
     }
 
     .menu_text {
-      grid-column: 1;
+      display: flex;
+      flex-direction: column;
+      line-height: 3vw;
+    
+    }
+
+
+    .bottom_menu_1,
+    .bottom_menu_2 {
+
+      margin-top: 10%; /* Juster efter behov */
     }
 
     .menu_illustration img {
       max-width: 100%;
+      width: 50%;
     }
+
+   
   }
 </style>
