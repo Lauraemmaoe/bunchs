@@ -7,32 +7,28 @@ import MainLayout from "../layout/MainLayout.astro";
 
 <MainLayout>
   <div class="menu_grid">
-    <div>
+    <div class="menu_text">
       <h1>Check out our menu,</h1>
-      <div class="menu_illustration">
-        <img src="/svg/twowineglass.svg" alt="" />
-      </div>
       <p>
-        Indulge in a delightful selection of wines perfectly paired with delectable appetizers. <br />From artisanal cheeses to savory charcuterie, our menu offers a tantalizing array of flavors to complement your wine experience.
+        Indulge in a delightful selection of wines perfectly paired with delectable appetizers. <br />From artisanal cheeses to savory charcuterie, our menu offers a tantalizing array of flavors to complement your wine experience. <br />Explore our offerings and treat your palate to a journey of taste sensations at our winebar!
       </p>
-      <p>Explore our offerings and treat your palate to a journey of taste sensations at our winebar!</p>
+    </div>
+    <div class="menu_illustration">
+      <img src="/svg/twowineglass.svg" alt="" />
     </div>
   </div>
 
-  <p>
-    Indulge in a delightful selection of wines perfectly paired with delectable appetizers. <br />From artisanal cheeses to savory charcuterie, our menu offers a tantalizing array of flavors to complement your wine experience.
-  </p>
-  <p>Explore our offerings and treat your palate to a journey of taste sensations at our winebar!</p>
-
-  <div class="bottom_menu_1">
-    <a href="wine.astro">
-      <WineButton />
-    </a>
-  </div>
-  <div class="bottom_menu_2">
-    <a href="appetizers.astro">
-      <AppertizersButton />
-    </a>
+  <div class="bottoms_menu">
+    <div class="bottom_menu_1">
+      <a href="wine.astro">
+        <WineButton />
+      </a>
+    </div>
+    <div class="bottom_menu_2">
+      <a href="appetizers.astro">
+        <AppertizersButton />
+      </a>
+    </div>
   </div>
 
   <img src="pic_trulli.jpg" alt="Forside billede" />
@@ -53,26 +49,36 @@ import MainLayout from "../layout/MainLayout.astro";
     margin-left: 10px;
   }
 
-  .bottom_menu_1 {
-    padding-left: 37%;
-    padding-top: 10%;
-    padding-bottom: 10%;
-  }
-  .bottom_menu_2 {
-    padding-left: 32%;
-    padding-bottom: 20%;
-  }
   /* Tablet og desktop styling */
+
   @media only screen and (min-width: 800px) {
-    .menu_bottoms_grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
+    .bottoms_menu {
+      display: flex;
+      justify-content: center;
     }
 
     .bottom_menu_1,
     .bottom_menu_2 {
-      width: 100%;
-      margin-top: 20%;
+      width: 40%;
+      margin-top: 10%; /* Juster efter behov */
+    }
+
+    h1 {
+      font-size: 4rem;
+    }
+
+    .menu_grid {
+      margin-top: 10%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .menu_text {
+      grid-column: 1;
+    }
+
+    .menu_illustration img {
+      max-width: 100%;
     }
   }
 </style>
