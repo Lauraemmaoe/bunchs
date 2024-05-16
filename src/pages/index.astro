@@ -34,169 +34,169 @@ import MainLayout from "../layout/MainLayout.astro";
           Bunch's Wine Bar is located at H.C Ørsteds Vej 50A, st. 4. in Frederiksberg. <br />
           <br />
            In our wine bar, we offer wine tastings for both private individuals and corporate clients, and we have a wide selection of natural wines. Therefore, you'll be able to taste wines that you can't find anywhere else. <br />
-           <h1>We have, </h1>
-          <p>.. 12 different wines by the glass (bubbles, red, white & orange) - also full bottles. <br /> <br> If you feel like having a little bite to eat with us, we have several different small dishes on the menu, including anchovies, burrata, pâté, serrano ham, and more.</p>
-      
-      </div>
-    </div>
-  </div>
-  <div class="forside_illustrationer">
-    <img src="/svg/glass1.svg" alt="" />
-    <img src="/svg/forkspoon.svg" alt="" />
-  </div>
-
-  <img src="pic_trulli.jpg" alt="Forside billede" />
-
-  <div id="forside_intro_grid">
-    <div id="column-left">
-      <div id="forside_intro_2">
-        <div class="lys_illustration">
-          <img src="/svg/candle.svg" alt="" />
-        </div>
-        <h1>Stop by,</h1>
-        <h2>. . . and enjoy a good glass of natural wine.</h2>
-
-        <p>
-          Whether you're looking to savor a fine glass of wine before <br />your meal or eager to sample a variety of wines with a group <br />of family members, friends, or colleagues, our wine bar is definitely worth a visit.
+          <h1>We have,</h1>
+          <p>.. 12 different wines by the glass (bubbles, red, white & orange) - also full bottles. <br /> <br /> If you feel like having a little bite to eat with us, we have several different small dishes on the menu, including anchovies, burrata, pâté, serrano ham, and more.</p>
         </p>
-        <p>Here, you can indulge in our exclusive selection of natural wines, unavailable elsewhere, which go beyond just conventional wines.</p>
-      </div>
-      <div id="forside_intro_2">
-        <h1>Moreover,</h1>
-        <p>We regularly hold wine tastings and other events in the wine bar with plenty of entertainment, such as readings, live music, and more. You can keep up with upcoming events on our website or Instagram and Facebook.</p>
-      </div>
-
-      <div class="book_bottom">
-        <BookButton />
       </div>
     </div>
-    <div id="column-right">
-      <img src="pic_trulli.jpg" alt="Forside billede" />
-      <img src="pic_trulli.jpg" alt="Forside billede" />
+    <div class="forside_illustrationer">
+      <img src="/svg/glass1.svg" alt="" />
+      <img src="/svg/forkspoon.svg" alt="" />
+    </div>
+
+    <img src="pic_trulli.jpg" alt="Forside billede" />
+
+    <div id="forside_intro_grid">
+      <div id="column-left">
+        <div id="forside_intro_2">
+          <div class="lys_illustration">
+            <img src="/svg/candle.svg" alt="" />
+          </div>
+          <h1>Stop by,</h1>
+          <h2>. . . and enjoy a good glass of natural wine.</h2>
+
+          <p>
+            Whether you're looking to savor a fine glass of wine before <br />your meal or eager to sample a variety of wines with a group <br />of family members, friends, or colleagues, our wine bar is definitely worth a visit.
+          </p>
+          <p>Here, you can indulge in our exclusive selection of natural wines, unavailable elsewhere, which go beyond just conventional wines.</p>
+        </div>
+        <div id="forside_intro_2">
+          <h1>Moreover,</h1>
+          <p>We regularly hold wine tastings and other events in the wine bar with plenty of entertainment, such as readings, live music, and more. You can keep up with upcoming events on our website or Instagram and Facebook.</p>
+        </div>
+
+        <div class="book_bottom">
+          <BookButton />
+        </div>
+      </div>
+      <div id="column-right">
+        <img src="pic_trulli.jpg" alt="Forside billede" />
+        <img src="pic_trulli.jpg" alt="Forside billede" />
+      </div>
+    </div>
+
+    <div class="sociale_medier">
+      <h1>Follow us on social media!</h1>
+      <div class="sociale_medier_icon">
+        <Some />
+      </div>
+      <MovingImgs />
     </div>
   </div>
 
-  <div class="sociale_medier">
-    <h1>Follow us on social media!</h1>
-    <div class="sociale_medier_icon">
-      <Some />
-    </div>
-    <MovingImgs />
-  </div>
-</MainLayout>
-
-<style>
-  /* Mobil styling */
-  .forside_wine img {
-    max-width: 90%;
-    height: auto;
-    margin-top: 50px;
-    margin-left: 80px;
-  }
-  .forside_intro {
-    line-height: 0.8;
-    margin-left: 10px;
-    margin-top: 0;
-  }
-  #forside_intro_2 {
-    line-height: 1.5;
-    margin-left: 10px;
-    margin-right: 10px;
-  }
-
-  .forside_illustrationer img {
-    margin-left: 20%;
-    max-width: 50%;
-    margin-top: 10%;
-  }
-  .lys_illustration img {
-    max-width: 100%;
-    height: auto;
-    margin-left: 70%;
-    margin-top: 20%;
-  }
-
-  .sociale_medier_icon {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-  }
-
-  .sociale_medier_icon img {
-    width: 40px;
-    height: 40px;
-    padding: 20px;
-  }
-  .lys_illustration {
-    display: none;
-  }
-
-  /* Tablet og desktop styling */
-  @media only screen and (min-width: 800px) {
-    .forside_intro {
-      line-height: 1;
-      margin-left: 7%;
-      margin-top: -10%;
-      position: relative;
-      z-index: 1;
-    }
-
+  <style>
+    /* Mobil styling */
     .forside_wine img {
-      max-width: 70%;
+      max-width: 90%;
       height: auto;
-      margin-top: 10%;
-      margin-left: 35%;
-      position: relative;
-      z-index: 0;
+      margin-top: 50px;
+      margin-left: 80px;
+    }
+    .forside_intro {
+      line-height: 0.8;
+      margin-left: 10px;
+      margin-top: 0;
+    }
+    #forside_intro_2 {
+      line-height: 1.5;
+      margin-left: 10px;
+      margin-right: 10px;
     }
 
-    .forside_intro h1 {
-      font-size: 4rem;
-    }
-    .forside_intro h2 {
-      font-size: 2.5rem;
-    }
-    .forside_intro p {
-      font-size: 2rem;
-    }
-    .menu_bottom {
-      margin-left: 8%;
-    }
-    #forside_intro_grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-      margin-top: 11%;
-      line-height: 1;
-      margin-left: 5%;
-    }
-
-    #column-left {
-      grid-column: 2;
-    }
-
-    #column-right {
-      grid-column: 1;
-    }
     .forside_illustrationer img {
-      max-width: 20%;
-      margin-top: 5%;
+      margin-left: 20%;
+      max-width: 50%;
+      margin-top: 10%;
+    }
+    .lys_illustration img {
+      max-width: 100%;
+      height: auto;
+      margin-left: 70%;
+      margin-top: 20%;
     }
 
-    .book_bottom {
-      margin-left: 1%;
+    .sociale_medier_icon {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
     }
 
+    .sociale_medier_icon img {
+      width: 40px;
+      height: 40px;
+      padding: 20px;
+    }
     .lys_illustration {
-      max-width: 60%;
+      display: none;
     }
 
-    .sociale_medier h1 {
-      text-align: center;
-      margin-top: 15%;
+    /* Tablet og desktop styling */
+    @media only screen and (min-width: 800px) {
+      .forside_intro {
+        line-height: 1;
+        margin-left: 7%;
+        margin-top: -10%;
+        position: relative;
+        z-index: 1;
+      }
+
+      .forside_wine img {
+        max-width: 70%;
+        height: auto;
+        margin-top: 10%;
+        margin-left: 35%;
+        position: relative;
+        z-index: 0;
+      }
+
+      .forside_intro h1 {
+        font-size: 4rem;
+      }
+      .forside_intro h2 {
+        font-size: 2.5rem;
+      }
+      .forside_intro p {
+        font-size: 2rem;
+      }
+      .menu_bottom {
+        margin-left: 8%;
+      }
+      #forside_intro_grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        margin-top: 11%;
+        line-height: 1;
+        margin-left: 5%;
+      }
+
+      #column-left {
+        grid-column: 2;
+      }
+
+      #column-right {
+        grid-column: 1;
+      }
+      .forside_illustrationer img {
+        max-width: 20%;
+        margin-top: 5%;
+      }
+
+      .book_bottom {
+        margin-left: 1%;
+      }
+
+      .lys_illustration {
+        max-width: 60%;
+      }
+
+      .sociale_medier h1 {
+        text-align: center;
+        margin-top: 15%;
+      }
+      .lys_illustration {
+        display: block;
+      }
     }
-    .lys_illustration {
-      display: block;
-    }
-  }
-</style>
+  </style>
+</MainLayout>
