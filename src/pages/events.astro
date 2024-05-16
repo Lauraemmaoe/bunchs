@@ -15,7 +15,7 @@ import MovingImgs from "../komponenter/MovingImgs.astro";
     </div>
     <div class="grid_event1_2">
       <h1>Indulge in,</h1>
-      <p>.. the Magic of Music, Words, and Wine Tasting at Bunchs Wine Bar!</p>
+      <p>..the Magic of Music, Words, and Wine Tasting at Bunchs Wine Bar!</p>
       <div class="glass">
         <img src="/svg/glass2.svg" alt="wineglass" />
       </div>
@@ -48,9 +48,6 @@ import MovingImgs from "../komponenter/MovingImgs.astro";
       <p>Celebrating a birthday or other special occasion? Write us via email and we will tailor the perfect offer for you.</p>
       <p>Stay in the loop with Bunchs Wine Bar.</p>
 
-     
-  
-
       <div class="grid_knap0">
         <div class="grid_knap1">
           <Some />
@@ -73,20 +70,33 @@ import MovingImgs from "../komponenter/MovingImgs.astro";
   img {
     max-width: 50%;
     height: auto;
-    display: block; /* Skifter display til blok, så det kan centreres */
+    display: block;
     margin: 0 auto;
   }
 
   .glass {
-    border-bottom: 7px solid #232188;
+    border-bottom: 3px solid #232188;
     padding-bottom: 80px;
     position: relative;
+    margin-left: 7%;
+    margin-right: 7%;
   }
 
   .glass img {
     width: 100%;
     display: block;
     animation: rotateAnimation 2s infinite linear;
+  }
+  h1 {
+    margin-left: 5%;
+    margin-top: 17%;
+  }
+
+  p {
+    margin-left: 5%;
+  }
+  .grid_event3_1 h1 {
+    margin-top: 4%;
   }
 
   @keyframes rotateAnimation {
@@ -100,11 +110,12 @@ import MovingImgs from "../komponenter/MovingImgs.astro";
       transform: rotate(0deg);
     }
   }
-
+  .grid_event2_2 {
+    margin-top: 15%;
+  }
   .grid_knap1 {
     display: flex;
     justify-content: center;
-    align-items: center;
     padding-bottom: 20px;
   }
   .grid_knap2 {
@@ -119,6 +130,18 @@ import MovingImgs from "../komponenter/MovingImgs.astro";
     align-items: center;
     padding-bottom: 20px;
     padding-top: 20px;
+  }
+  .grid_knap0,
+  .grid_event3_2 {
+    margin-top: 15%;
+  }
+  .grid_knap2 {
+    margin-top: 5%;
+  }
+
+  .grid_event3_2 img {
+    max-width: 40%;
+    margin-bottom: 10%;
   }
 
   /* desktop*/
@@ -138,6 +161,9 @@ import MovingImgs from "../komponenter/MovingImgs.astro";
       display: grid;
       grid-template-columns: 1fr 1fr;
     }
+    .grid_event2_1 {
+      margin-left: 8%;
+    }
 
     .grid_event3_2 {
       max-width: 90%;
@@ -150,6 +176,31 @@ import MovingImgs from "../komponenter/MovingImgs.astro";
     }
     .glass img {
       max-width: 35%;
+    }
+    .book {
+      display: flex;
+      justify-content: start;
+      margin-left: 8%;
+      padding-bottom: 20px;
+      padding-top: 20px;
+    }
+    .grid_event3_2 img {
+      margin-top: 0;
+    }
+    .grid_event3_1 {
+      margin-left: 8%;
+    }
+    .grid_knap1 {
+      justify-content: start;
+      margin-left: 8%;
+      padding-top: 10%;
+    }
+    .grid_knap0 {
+      margin-top: 0;
+    }
+    .glass {
+      margin-left: 10%;
+      margin-right: 10%;
     }
   }
 </style>
