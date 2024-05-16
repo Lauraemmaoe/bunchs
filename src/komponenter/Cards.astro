@@ -1,0 +1,12 @@
+---
+const { image, name, location, short_description, slug } = Astro.props;
+---
+
+<a href={`/wines/${slug}`}>
+  <article>
+    <img src={image} alt="" />
+    <h3>{name}</h3>
+    <h4>{location}</h4>
+    <p>{short_description}</p>
+  </article></a
+>
