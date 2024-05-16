@@ -3,4 +3,159 @@ import "../style/style.css";
 import MainLayout from "../layout/MainLayout.astro";
 ---
 
-<MainLayout />
+<MainLayout>
+  <div class="gallery">
+    <div class="gallery-item item1">
+      <img src="/img/gimg1.png" alt="Billede 1" />
+      <div class="overlay">Here, check out the ambience of Bunchs Winebar.</div>
+    </div>
+    <div class="gallery-item item2">
+      <img src="/img/gimg3.png" alt="Billede 1" />
+    </div>
+    <div class="gallery-item item3">
+      <img src="/img/gimg3.png" alt="Billede 1" />
+    </div>
+    <div class="gallery-item item4">
+      <img src="/img/gimg4.png" alt="Billede 1" />
+    </div>
+    <div class="gallery-item item5">
+      <img src="/img/gimg5.png" alt="Billede 1" />
+    </div>
+    <div class="gallery-item item6">
+      <img src="/img/gimg6.png" alt="Billede 1" />
+    </div>
+    <div class="gallery-item item7">
+      <img src="/img/gimg7.png" alt="Billede 1" />
+    </div>
+    <div class="gallery-item item8">
+      <img src="/img/gimg8.png" alt="Billede 1" />
+    </div>
+    <div class="gallery-item item9">
+      <img src="/img/gimg9.png" alt="Billede 1" />
+    </div>
+    <div class="gallery-item item10">
+      <img src="/img/gimg10.png" alt="Billede 1" />
+    </div>
+    <div class="gallery-item item11">
+      <img src="/img/gimg1.png" alt="Billede 1" />
+    </div>
+    <div class="gallery-item item12">
+      <img src="/img/gimg12.png" alt="Billede 1" />
+    </div>
+  </div>
+</MainLayout>
+
+<style>
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    max-width: 70vw;
+    margin: auto;
+    margin-top: 50px;
+    border: 3px solid rgba(35, 33, 136, 0);
+    padding: 50px;
+    animation: fadeInBorder 4s forwards;
+  }
+  @keyframes fadeInBorder {
+    0% {
+      border-color: rgba(35, 33, 136, 0);
+    }
+    100% {
+      border-color: rgba(35, 33, 136, 1);
+    }
+  }
+
+  .gallery-item {
+    position: relative;
+  }
+
+  .gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: filter 0.3s;
+  }
+
+  .gallery-item:hover img {
+    filter: blur(5px);
+  }
+
+  .item1 .overlay {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-family: "font_h2";
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 5px;
+    font-size: 2em;
+  }
+
+  .item1 {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+  .item3 {
+    grid-column: span 1;
+    grid-row: span 2;
+  }
+  .item4 {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+  .item7 {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+  .item8 {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+  .item11 {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+  .item12 {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+
+  @media (min-width: 868px) {
+    .gallery {
+      grid-template-columns: repeat(4, 1fr);
+      margin-bottom: 100px;
+      margin-top: 150px;
+    }
+    .item1 {
+      grid-column: span 2;
+      grid-row: span 2;
+      margin-bottom: 100px;
+    }
+    .item3 {
+      grid-column: span 1;
+      grid-row: span 2;
+      margin-bottom: 100px;
+    }
+    .item4 {
+      grid-column: span 2;
+      grid-row: span 1;
+    }
+    .item7 {
+      grid-column: span 1;
+      grid-row: span 2;
+    }
+    .item8 {
+      grid-column: span 2;
+      grid-row: span 1;
+    }
+    .item11 {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+    .item12 {
+      grid-column: span 2;
+      grid-row: span 1;
+    }
+  }
+</style>
