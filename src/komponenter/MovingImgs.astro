@@ -5,23 +5,23 @@
 <div class="container_movingframes">
   <div class="moving_frames">
     <section class="first">
-      <div class=""><img src="/public/img/dog.png" alt="" /></div>
+      <div class=""><img src="/public/img/movingimgs/olive.png" alt="olive" /></div>
 
-      <div class=""><img src="/public/img/dog.png" alt="" /></div>
+      <div class=""><img src="/public/img/movingimgs/sus.png" alt="" /></div>
 
-      <div class=""><img src="/public/img/dog.png" alt="" /></div>
+      <div class=""><img src="/public/img/movingimgs/pure.png" alt="" /></div>
 
-      <div class=""><img src="/public/img/dog.png" alt="" /></div>
+      <div class=""><img src="/public/img/movingimgs/people.png" alt="" /></div>
     </section>
 
     <section class="second">
-      <div class=""><img src="/public/img/dog.png" alt="" /></div>
+      <div class=""><img src="/public/img/movingimgs/karla.png" alt="" /></div>
 
-      <div class=""><img src="/public/img/dog.png" alt="" /></div>
+      <div class=""><img src="/public/img/movingimgs/winefood.png" alt="" /></div>
 
-      <div class=""><img src="/public/img/dog.png" alt="" /></div>
+      <div class=""><img src="/public/img/movingimgs/flower.png" alt="" /></div>
 
-      <div class=""><img src="/public/img/dog.png" alt="" /></div>
+      <div class=""><img src="/public/img/movingimgs/vin.png" alt="" /></div>
     </section>
   </div>
 </div>
@@ -43,6 +43,7 @@
   .second {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    width: 100%;
   }
 
   .moving_frames img {
@@ -52,7 +53,7 @@
 
   .moving_frames {
     position: relative;
-    animation: moveLeft 30s linear infinite;
+    animation: moveLeft 25s linear infinite;
   }
 
   @keyframes moveLeft {
