@@ -23,6 +23,7 @@ h2 {
 p {
   font-family: "font_p";
   font-size: 1.2rem;
+  word-break: break-word;
 }
 body {
   background-color: #f5f2e8;

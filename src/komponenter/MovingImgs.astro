@@ -3,85 +3,64 @@
 ---
 
 <div class="container_movingframes">
-
-<div class="moving_frames">
-
+  <div class="moving_frames">
     <section class="first">
+      <div class=""><img src="/public/img/dog.png" alt="" /></div>
 
-    <div class=""><img src="/public/img/dog.png" alt=""></div>
+      <div class=""><img src="/public/img/dog.png" alt="" /></div>
 
-    <div class=""><img src="/public/img/dog.png" alt=""></div>
+      <div class=""><img src="/public/img/dog.png" alt="" /></div>
 
-    <div class=""><img src="/public/img/dog.png" alt=""></div>
+      <div class=""><img src="/public/img/dog.png" alt="" /></div>
+    </section>
 
-    <div class=""><img src="/public/img/dog.png" alt=""></div>
-</section>
+    <section class="second">
+      <div class=""><img src="/public/img/dog.png" alt="" /></div>
 
-<section class="second">
+      <div class=""><img src="/public/img/dog.png" alt="" /></div>
 
-    <div class=""><img src="/public/img/dog.png" alt=""></div>
+      <div class=""><img src="/public/img/dog.png" alt="" /></div>
 
-    <div class=""><img src="/public/img/dog.png" alt=""></div>
-
-    <div class=""><img src="/public/img/dog.png" alt=""></div>
-
-    <div class=""><img src="/public/img/dog.png" alt=""></div>
-</section>
-
+      <div class=""><img src="/public/img/dog.png" alt="" /></div>
+    </section>
+  </div>
 </div>
 
-</div>
-
-
-
-
-   
 <style>
-
-
-.container_movingframes {
+  .container_movingframes {
     width: 100vw;
     overflow: hidden;
-}
+    margin-bottom: 7%;
+  }
 
+  .moving_frames {
+    display: flex;
+    flex-direction: row;
+    width: 200vw;
+  }
 
-    .moving_frames {
-        display: flex;
-        flex-direction: row;
-        width: 200vw;
-    
+  .first,
+  .second {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .moving_frames img {
+    width: 100%;
+    height: auto;
+  }
+
+  .moving_frames {
+    position: relative;
+    animation: moveLeft 30s linear infinite;
+  }
+
+  @keyframes moveLeft {
+    from {
+      transform: translateX(0);
     }
-
-    .first, .second {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
+    to {
+      transform: translateX(-100vw); /* Adjust the distance as needed */
     }
-
-
-    
-    .moving_frames img {
-        width: 100%;
-        height: auto;
-    
-   
-    }
-
-    .moving_frames {
-        position: relative; 
-        animation: moveLeft 30s linear infinite;
-     
-    }
-
-
-    @keyframes moveLeft {
-        from {
-            transform: translateX(0);
-        }
-        to {
-            transform: translateX(-100vw); /* Adjust the distance as needed */
-        }
-    }
-
-
+  }
 </style>
-
