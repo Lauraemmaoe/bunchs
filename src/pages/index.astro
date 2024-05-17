@@ -22,12 +22,18 @@ import MainLayout from "../layout/MainLayout.astro";
   </div>
 
   <div id="forside_intro_grid">
-    <div class="image-grid">
-      <div class="bunchsvinbar">
-        <img src="/img/bunchsvinbar.webp" alt="Forside billede" />
-      </div>
-      <div class="vin_billede">
-        <img src="/img/wine_background.webp" alt="Forside billede" />
+    <div class="container">
+      <div class="image-container">
+        <img
+          src="/img/bunchsvinbar.webp"
+          alt="Baggrundsbillede"
+          class="background-image"
+        />
+        <img
+          src="/img/wine_background.webp"
+          alt="Forgrundsbillede"
+          class="foreground-image"
+        />
       </div>
     </div>
     <div id="column-right">
@@ -59,6 +65,10 @@ import MainLayout from "../layout/MainLayout.astro";
     <div class="forside_illustrationer">
       <img src="/svg/glass1.svg" alt="" />
       <img src="/svg/forkspoon.svg" alt="" />
+    </div>
+
+    <div class="rullebaggrund">
+      <p>,</p>
     </div>
 
     <div id="forside_intro_2">
@@ -106,6 +116,44 @@ import MainLayout from "../layout/MainLayout.astro";
 
   <style>
     /* Mobil styling */
+    .rullebaggrund {
+      background-image: url(/img/wine_background.webp);
+
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      background-position: center;
+      background-attachment: fixed;
+      padding-bottom: 50px;
+      padding-top: 50px;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
+
+    .image-container {
+      display: grid;
+      grid-template-areas: "background foreground";
+      align-items: end;
+      margin-left: 100px;
+    }
+
+    .background-image {
+      grid-area: background;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .foreground-image {
+      grid-area: foreground;
+      width: 90%; /* Juster størrelsen efter behov */
+      margin-left: -45%; /* Juster dette for at overlappe billedet */
+      margin-bottom: -24%;
+    }
     .forside_wine img {
       max-width: 90%;
       height: auto;
@@ -139,6 +187,12 @@ import MainLayout from "../layout/MainLayout.astro";
       display: flex;
       justify-content: center;
       margin-top: 20px;
+      background-image: url(/svg/smbottle.svg);
+
+      background-repeat: no-repeat;
+      padding-bottom: 100px;
+      background-size: 300px;
+      margin-bottom: 10px;
     }
 
     .sociale_medier_icon img {
