@@ -57,6 +57,11 @@ import MainLayout from "../layout/MainLayout.astro";
     padding: 50px;
     animation: fadeInBorder 4s forwards;
   }
+
+  .gallery img:hover {
+    transform: scale(1.04);
+    box-shadow: 0 0 10px rgba(0, 0, 1, 1);
+  }
   @keyframes fadeInBorder {
     0% {
       border-color: rgba(35, 33, 136, 0);
@@ -65,7 +70,6 @@ import MainLayout from "../layout/MainLayout.astro";
       border-color: rgba(35, 33, 136, 1);
     }
   }
-
   .gallery-item {
     position: relative;
   }
@@ -75,10 +79,6 @@ import MainLayout from "../layout/MainLayout.astro";
     height: auto;
     display: block;
     transition: filter 0.3s;
-  }
-
-  .gallery-item:hover img {
-    filter: blur(4px);
   }
 
   .item1 .overlay {
