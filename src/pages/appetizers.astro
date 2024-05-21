@@ -1,6 +1,16 @@
 ---
 import "../style/style.css";
 import MainLayout from "../layout/MainLayout.astro";
+import Appetizercard from "../komponenter/Appetizercard.astro";
+
+const data = await fetch("https://bxhbbpujtinmymxmzqsh.supabase.co/rest/v1/appetizers", {
+  method: "GET",
+  headers: {
+    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJ4aGJicHVqdGlubXlteG16cXNoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTU1ODg0NDYsImV4cCI6MjAzMTE2NDQ0Nn0.Tzo9XzOyBabh4UPNBz78iKjPSmVZbK1uoAHBg8khJhA",
+  },
+}).then((res) => res.json());
+
+console.log(data);
 ---
 
 <MainLayout>
@@ -16,6 +26,14 @@ import MainLayout from "../layout/MainLayout.astro";
   <div class="card_grid">
     <p>'Ask the staff for any allergies'</p>
   </div>
+
+  <section class="appetizers">
+    {
+      data.map((show) => {
+        return <Appetizercard data={show} />;
+      })
+    }
+  </section>
 </MainLayout>
 
 <style>
