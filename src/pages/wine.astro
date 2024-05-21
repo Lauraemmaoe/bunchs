@@ -3,38 +3,33 @@ import "../style/style.css";
 import MainLayout from "../layout/MainLayout.astro";
 import Winecard from "../komponenter/Winecard.astro";
 
-const data = await fetch("https://bxhbbpujtinmymxmzqsh.supabase.co/rest/v1/wine_and_appetizers", {
-  method: "GET",
-  headers: {
-    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJ4aGJicHVqdGlubXlteG16cXNoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTU1ODg0NDYsImV4cCI6MjAzMTE2NDQ0Nn0.Tzo9XzOyBabh4UPNBz78iKjPSmVZbK1uoAHBg8khJhA",
-  },
-}).then((res) => res.json());
+const data = await fetch(
+  "https://bxhbbpujtinmymxmzqsh.supabase.co/rest/v1/wine_and_appetizers",
+  {
+    method: "GET",
+    headers: {
+      apikey:
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJ4aGJicHVqdGlubXlteG16cXNoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTU1ODg0NDYsImV4cCI6MjAzMTE2NDQ0Nn0.Tzo9XzOyBabh4UPNBz78iKjPSmVZbK1uoAHBg8khJhA",
+    },
+  }
+).then((res) => res.json());
 
 console.log(data);
 ---
 
 <MainLayout>
-  <div>
-    <h1>Bunchs Wines</h1>
-  </div>
-
-  <div class="wine_menu">
-    <div>
-      <h2>SPARKLING</h2>
+  <div class="grid_winemenu">
+    <div class="grid_winemenu1">
+      <div>
+        <h1>Bunchs Wines</h1>
+      </div>
+      <h2>Choose between red, sparkling, orange, & white.</h2>
     </div>
-    <div>
-      <h2>WHITE</h2>
+    <div class="grid_winemenu2">
+      <div class="glass_illustration">
+        <img src="/svg/glass3.svg" alt="" />
+      </div>
     </div>
-    <div>
-      <h2>ORANGE</h2>
-    </div>
-    <div>
-      <h2>RED</h2>
-    </div>
-  </div>
-
-  <div class="glass_illustration">
-    <img src="/svg/glass3.svg" alt="" />
   </div>
   <section class="wines">
     {
@@ -56,15 +51,9 @@ console.log(data);
   }
   h2 {
     font-size: 1.2rem;
+    text-align: center;
   }
 
-  .wine_menu {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-left: 4%;
-    margin-right: 4%;
-  }
   .glass_illustration {
     max-width: 60%;
     margin-left: 30%;
@@ -74,6 +63,12 @@ console.log(data);
 
   /* Tablet og desktop styling */
   @media only screen and (min-width: 800px) {
+    .grid_winemenu {
+      display: grid;
+      grid-template-columns: 4fr 1fr;
+      margin-bottom: 50px;
+    }
+
     h2 {
       font-size: 2rem;
     }
@@ -83,14 +78,15 @@ console.log(data);
       margin-left: 15%;
       margin-right: 15%;
     }
-    .wine_menu {
-      margin-left: 15%;
-      margin-right: 15%;
-    }
+
     .glass_illustration {
-      max-width: 40%;
-      margin-left: 60%;
-      margin-top: 0;
+      max-width: 100%;
+      margin-left: 2%;
+      margin-top: 60%;
+    }
+    .wines {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
     }
   }
 </style>
