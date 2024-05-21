@@ -4,20 +4,21 @@ console.log(data);
 ---
 
 <article>
-  <div class="grid_app">
-    <div class="grid_app1">
-      <h1>{data.appetizers}</h1>
-    </div>
-    <div class="grid_app2">
-      <p>Price:{data.appetizers_price}</p>
-    </div>
-    <div class="grid_app3">
-      <img src={data.appetizers_illustration} alt="" />
-    </div>
+  <div class="grid_app1">
+    <h1>{data.appetizers}</h1>
+  </div>
+  <div class="grid_app2">
+    <p>Price:{data.appetizers_price}</p>
+  </div>
+  <div class="grid_app3">
+    <img src={"/svg/illustration_appetizers/" + data.appetizers_illustration} alt="" />
   </div>
 </article>
-
+ `
 <style>
+  article img {
+    width: 100%;
+  }
   .grid_app {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -36,5 +37,8 @@ console.log(data);
     padding-top: 20px;
     font-size: 1.5rem;
     padding-left: 20%;
+  }
+  p {
+    word-break: normal;
   }
 </style>
