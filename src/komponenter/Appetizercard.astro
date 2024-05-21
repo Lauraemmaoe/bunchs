@@ -1,0 +1,40 @@
+---
+const { data } = Astro.props;
+console.log(data);
+---
+
+<article>
+  <div class="grid_app">
+    <div class="grid_app1">
+      <h1>{data.appetizers}</h1>
+    </div>
+    <div class="grid_app2">
+      <p>Price:{data.appetizers_price}</p>
+    </div>
+    <div class="grid_app3">
+      <img src={data.appetizers_illustration} alt="" />
+    </div>
+  </div>
+</article>
+
+<style>
+  .grid_app {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  article {
+    background-color: #fffaf3;
+    border-radius: 40px;
+    border: 5px solid #9db999;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  h1 {
+    border-right: 2px solid #232188;
+    color: #232188;
+    padding-top: 20px;
+    font-size: 1.5rem;
+    padding-left: 20%;
+  }
+</style>
