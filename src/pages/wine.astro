@@ -3,16 +3,12 @@ import "../style/style.css";
 import MainLayout from "../layout/MainLayout.astro";
 import Winecard from "../komponenter/Winecard.astro";
 
-const data = await fetch(
-  "https://bxhbbpujtinmymxmzqsh.supabase.co/rest/v1/wine_and_appetizers",
-  {
-    method: "GET",
-    headers: {
-      apikey:
-        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJ4aGJicHVqdGlubXlteG16cXNoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTU1ODg0NDYsImV4cCI6MjAzMTE2NDQ0Nn0.Tzo9XzOyBabh4UPNBz78iKjPSmVZbK1uoAHBg8khJhA",
-    },
-  }
-).then((res) => res.json());
+const data = await fetch("https://bxhbbpujtinmymxmzqsh.supabase.co/rest/v1/wine_and_appetizers", {
+  method: "GET",
+  headers: {
+    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJ4aGJicHVqdGlubXlteG16cXNoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTU1ODg0NDYsImV4cCI6MjAzMTE2NDQ0Nn0.Tzo9XzOyBabh4UPNBz78iKjPSmVZbK1uoAHBg8khJhA",
+  },
+}).then((res) => res.json());
 
 console.log(data);
 ---
@@ -71,22 +67,29 @@ console.log(data);
 
     h2 {
       font-size: 2rem;
+      text-align: left;
+      padding-left: 80px;
     }
     h1 {
       margin-top: 15%;
       font-size: 6rem;
-      margin-left: 15%;
-      margin-right: 15%;
+      text-align: left;
+      margin-right: 25%;
     }
 
     .glass_illustration {
-      max-width: 100%;
+      max-width: 140%;
       margin-left: 2%;
-      margin-top: 60%;
+      margin-top: 75%;
     }
     .wines {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+    .grid_winemenu1 {
+      padding-top: 50px;
     }
   }
 </style>

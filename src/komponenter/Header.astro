@@ -23,159 +23,157 @@ import Some from "./Some.astro";
       </ul>
     </div>
   </nav>
+</div>
 
-  <!-- <div class="logo">
-    <a href="/">
-      <img src="/svg/logo.svg" alt="poster1" />
-    </a>
-  </div> -->
+<style>
+  .menu2 {
+    display: flex;
+    justify-content: space-between;
+  }
 
-  <style>
-    .menu2 {
-      display: flex;
-      justify-content: space-between;
-    }
+  .some {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    padding-right: 45px;
+  }
+  .logo {
+    z-index: 9999;
+    padding: 10px 20px;
+  }
+  .inner {
+    padding-bottom: 110px;
+  }
+  .logo img {
+    width: 50%;
+  }
+  .menu ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    padding-top: 100px;
+    text-align: center;
+  }
 
+  .menu ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .container {
+    background-color: #f5f2e8;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+  .burger-icon {
+    cursor: pointer;
+    padding-right: 20px;
+    font-size: 60px;
+    color: #232188;
+    position: relative;
+    z-index: 100;
+  }
+
+  .menu {
+    background-color: #f5f2e8;
+    background-size: cover;
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+    display: none;
+    left: 0;
+    top: 0;
+    z-index: 50;
+    font-family: "font_h2";
+  }
+
+  .menu.active {
+    display: block;
+  }
+
+  .menu a {
+    text-decoration: none;
+    text-align: center;
+    font-size: 2rem;
+    padding-top: 20px;
+    display: flex;
+    margin: 20px;
+  }
+  .menu ul li a {
+    text-decoration: none;
+    color: #232188;
+    position: relative;
+    border-bottom: 4px solid transparent;
+    transition: border-color 0.3s ease;
+    margin-left: 150px;
+    margin-right: 200px;
+  }
+  .menu ul {
+    padding-top: 2px;
+  }
+
+  .menu ul li a:hover {
+    border-bottom-color: #232188;
+    color: #9db999;
+  }
+
+  @media only screen and (min-width: 768px) {
     .some {
-      display: flex;
-      justify-content: center;
-      margin-top: 70px;
-    }
-    .logo {
-      /* position: fixed; */
-      /* top: 10px;
-      left: 10px; */
-      z-index: 9999;
-
-      padding: 10px 20px;
+      display: none;
     }
     .inner {
-      margin-top: 100px;
+      margin-top: 10px;
+      padding-bottom: 20px;
+      padding-right: 80px;
     }
-    .logo img {
-      width: 50%;
-    }
-    .menu ul {
-      padding: 0;
-      margin: 0;
-      list-style: none;
-      padding-top: 100px;
-      text-align: center;
-    }
-
-    .menu ul li {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .container {
-      background-color: #f5f2e8;
-      width: 100%;
-      justify-content: space-between;
-      align-items: center;
-      position: fixed;
-    }
-
-    .burger-icon {
-      cursor: pointer;
-      padding-right: 20px;
-      font-size: 60px;
-      color: #232188;
-    }
-
-    .burger-icon {
-      /* display: flex; */
-      /* justify-content: flex-end; */
-      position: relative;
-      z-index: 100;
-    }
-
     .menu {
-      background-color: #f5f2e8;
-      background-size: cover;
-      margin: 0px;
-      width: 100%;
-      height: 100%;
-      display: none;
-      /* position: fixed; */
-      left: 0;
-      top: 0;
-      z-index: 50;
+      display: flex;
+      justify-content: flex-end;
+      position: fixed;
+      height: auto;
       font-family: "font_h2";
     }
-
-    .menu.active {
-      display: block;
-    }
-
-    .menu a {
-      text-decoration: none;
-      text-align: center;
-      font-size: 2rem;
-      padding-top: 20px;
-      display: flex;
-      margin: 20px;
-    }
     .menu ul li a {
-      text-decoration: none;
-      color: #232188;
-      position: relative;
-      border-bottom: 4px solid transparent;
-      transition: border-color 0.3s ease;
-      margin-left: 150px;
-      margin-right: 200px;
+      margin-left: 20px;
+      margin-right: 20px;
     }
     .menu ul {
-      padding-top: 2px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      gap: 20px;
     }
-
-    .menu ul li a:hover {
-      border-bottom-color: #232188;
-      color: #9db999;
+    .burger-icon {
+      display: none;
     }
-
-    @media only screen and (min-width: 768px) {
-      .some {
-        display: none;
-      }
-      .inner {
-        margin-top: 10px;
-      }
-      .menu {
-        display: flex;
-        justify-content: flex-end;
-
-        height: auto;
-        font-family: "font_h2";
-      }
-      .menu ul li a {
-        margin-left: 20px;
-        margin-right: 20px;
-      }
-      .menu ul {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
-      }
-      .burger-icon {
-        display: none;
-      }
-      .container {
-        display: flex;
-      }
+    .container {
+      display: flex;
+      position: relative;
     }
-  </style>
+    .logo img {
+      padding-top: 20px;
+      padding-left: 15px;
+    }
+    .logo {
+      position: fixed;
+    }
+  }
+</style>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const burgerIcon = document.querySelector(".burger-icon");
-      const menu = document.querySelector(".container .menu");
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const burgerIcon = document.querySelector(".burger-icon");
+    const menu = document.querySelector(".container .menu");
 
-      burgerIcon.addEventListener("click", function () {
-        menu.classList.toggle("active");
-        burgerIcon.classList.toggle("active");
-      });
+    burgerIcon.addEventListener("click", function () {
+      menu.classList.toggle("active");
+      burgerIcon.classList.toggle("active");
     });
-  </script>
-</div>
+  });
+</script>
