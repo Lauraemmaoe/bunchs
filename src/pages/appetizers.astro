@@ -14,13 +14,16 @@ console.log(data);
 ---
 
 <MainLayout>
-  <div class="ost_illustration">
-    <img src="/svg/cheese.svg" alt="" />
-  </div>
-
-  <h1>Bunchs Appetizers</h1>
-  <div class="gaffel_illustration">
-    <img src="/svg/fork.svg" alt="" />
+  <div>
+    <div class="grid_ost_fork">
+      <div class="ost_illustration">
+        <img src="/svg/cheese.svg" alt="" />
+      </div>
+      <div class="gaffel_illustration">
+        <img src="/svg/fork.svg" alt="" />
+      </div>
+    </div>
+    <h1>Bunchs Appetizers</h1>
   </div>
 
   <div class="card_grid">
@@ -37,30 +40,33 @@ console.log(data);
 </MainLayout>
 
 <style>
-
-  
-
   h1 {
-    font-size: 3.5rem;
+    font-size: 3rem;
     text-align: center;
     color: #232188;
     border-bottom: 4px solid rgb(0, 0, 0);
     margin-left: 5%;
     margin-right: 5%;
+    padding-top: 0;
   }
   .ost_illustration {
-    max-width: 30%;
+    max-width: 40%;
     margin-left: 10%;
     margin-top: 20%;
   }
   .ost_illustration {
     padding-top: 50px;
   }
+  .grid_ost_fork {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 
   .gaffel_illustration img {
     transform: rotate(-55deg);
-    max-width: 20%;
-    margin-left: 60%;
+    max-width: 25%;
+    margin-left: 30%;
+    padding-top: 87px;
   }
   p {
     font-size: 1rem;
@@ -75,20 +81,26 @@ console.log(data);
       margin-right: 15%;
     }
     .gaffel_illustration img {
-      max-width: 10%;
-      margin-left: 60%;
-      transform: rotate(-90deg);
-      margin-left: 80%;
+      max-width: 20%;
     }
     .ost_illustration {
-      max-width: 14%;
-      margin-top: 8%;
+      max-width: 30%;
+      margin-top: 6%;
     }
 
-    .appetizers{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
-  }
+    .appetizers {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 20px;
+    }
+    .grid_ost_fork {
+      padding-top: 5%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .gaffel_illustration img {
+      padding-top: 20px;
+      margin-left: 60%;
+    }
   }
 </style>
