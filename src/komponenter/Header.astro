@@ -3,6 +3,15 @@ import Some from "./Some.astro";
 ---
 
 <div class="container">
+  <div class="menu2">
+    <div class="logo">
+      <a href="/">
+        <img src="/svg/logo.svg" alt="poster1" />
+      </a>
+    </div>
+
+    <div class="burger-icon">&#9776;</div>
+  </div>
   <nav class="menu">
     <div class="inner">
       <ul>
@@ -15,24 +24,27 @@ import Some from "./Some.astro";
     </div>
   </nav>
 
-  <div class="burger-icon">&#9776;</div>
-
-  <div class="logo">
+  <!-- <div class="logo">
     <a href="/">
       <img src="/svg/logo.svg" alt="poster1" />
     </a>
-  </div>
+  </div> -->
 
   <style>
+    .menu2 {
+      display: flex;
+      justify-content: space-between;
+    }
+
     .some {
       display: flex;
       justify-content: center;
       margin-top: 70px;
     }
     .logo {
-      position: fixed;
-      top: 10px;
-      left: 10px;
+      /* position: fixed; */
+      /* top: 10px;
+      left: 10px; */
       z-index: 9999;
 
       padding: 10px 20px;
@@ -54,28 +66,27 @@ import Some from "./Some.astro";
     .menu ul li {
       display: flex;
       align-items: center;
+      justify-content: center;
     }
 
     .container {
-      justify-content: center;
+      background-color: #f5f2e8;
+      width: 100%;
+      justify-content: space-between;
       align-items: center;
-      position: relative;
+      position: fixed;
     }
 
     .burger-icon {
-      display: block;
       cursor: pointer;
-      position: fixed;
+      padding-right: 20px;
       font-size: 60px;
       color: #232188;
     }
 
-    .container .burger-icon {
-      z-index: 10000000;
-    }
     .burger-icon {
-      display: flex;
-      justify-content: flex-end;
+      /* display: flex; */
+      /* justify-content: flex-end; */
       position: relative;
       z-index: 100;
     }
@@ -87,7 +98,7 @@ import Some from "./Some.astro";
       width: 100%;
       height: 100%;
       display: none;
-      position: fixed;
+      /* position: fixed; */
       left: 0;
       top: 0;
       z-index: 50;
@@ -145,9 +156,13 @@ import Some from "./Some.astro";
       .menu ul {
         display: flex;
         flex-direction: row;
+        justify-content: flex-end;
       }
       .burger-icon {
         display: none;
+      }
+      .container {
+        display: flex;
       }
     }
   </style>
