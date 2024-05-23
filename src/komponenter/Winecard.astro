@@ -3,6 +3,12 @@ const { data } = Astro.props;
 console.log(data);
 ---
 
+
+<div class="flip-card">
+  <div style=`background-image: url(${data.wine_imgs})` class="flip-card-inner">
+
+    <div class="flip-card-front">
+      
 <article>
   <h1>{data.wine}</h1>
   <img src="/svg/winecard.svg" alt="" />
@@ -14,7 +20,12 @@ console.log(data);
     <p>Location: {data.location}</p>
   </div>
   <h3>{data.price_wine} DKK</h3>
-</article>
+</div>
+</div>
+</div>
+  </article>
+
+
 
 <style>
   article {
@@ -28,8 +39,10 @@ console.log(data);
     margin-right: 20px;
   }
 
-  article img {
-    width: 100%;
+
+
+  article {
+    height: 600px;
   }
 
   h1 {
@@ -37,11 +50,42 @@ console.log(data);
   }
   h3 {
     border-top: 2px solid black;
-    padding-top: 20px;
     text-align: center;
+  
   }
   .card_text {
     padding-bottom: 10px;
     padding-top: 20px;
   }
+
+
+  .flip-card {
+  background-color: transparent;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; 
+}
+
+
+.flip-card-inner {
+  transition: transform 2s;
+  transform-style: preserve-3d;
+  background-size: cover;
+  background-position: 100%;
+  border-radius: 40px;
+
+}
+
+
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+
+.flip-card-front, .flip-card-back {
+  -webkit-backface-visibility: hidden; 
+  backface-visibility: hidden;
+}
+
+  
 </style>
