@@ -79,7 +79,7 @@ import MainLayout from "../layout/MainLayout.astro";
         </div>
       </div>
       <div class="image-container">
-        <img src="/img/bunchskilt.webp" alt="Baggrundsbillede" class="background-image" />
+        <img src="/img/bunchsvinbarforside.webp" alt="Baggrundsbillede" class="background-image" />
         <img src="/img/susogmads_2.webp" alt="Forgrundsbillede" class="foreground-image2" />
       </div>
     </div>
@@ -92,235 +92,242 @@ import MainLayout from "../layout/MainLayout.astro";
     </div>
     <MovingImgs />
   </div>
+</MainLayout>
 
-  <style>
-    /* Mobil styling */
-    .rullebaggrund {
-      background-image: url(/img/vinrakker.webp);
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-attachment: fixed;
-      padding-bottom: 50px;
-      padding-top: 50px;
-    }
-    .fork img {
-      padding-bottom: 40px;
-    }
+<style>
+  /* Mobil styling */
+  .rullebaggrund {
+    background-image: url(/img/vinrakker.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    padding-bottom: 50px;
+    padding-top: 50px;
+  }
+  .fork img {
+    padding-bottom: 40px;
+  }
 
-    .image-container {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 50px;
-      margin-top: 50px
-      
-    }
+  .image-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    margin-top: 50px;
+  }
 
-    .image-container p {
-      position: absolute;
-      left: 70px;
-      font-size: x-small;
-      color: white;
-  
-      
-    }
+  .image-container p {
+    position: absolute;
+    left: 70px;
+    font-size: x-small;
+    color: white;
+  }
 
-    .image-container {
-      display: grid;
-      grid-template-areas: "background foreground";
-      align-items: end;
-      margin-left: 100px;
-    }
+  .image-container {
+    display: grid;
+    grid-template-areas: "background foreground";
+    align-items: end;
+    margin-left: 100px;
+  }
 
-    .background-image {
-      grid-area: background;
-      max-width: 130%;
-      height: auto;
-      margin-left: -30%;
-    
-    }
+  .background-image {
+    grid-area: background;
+    max-width: 130%;
+    height: auto;
+    margin-left: -30%;
+  }
 
-    .foreground-image1 {
-      grid-area: foreground;
-      width: 130%;
-      margin-left: -38%;
-      margin-bottom: -60%;
-    }
+  .foreground-image1 {
+    grid-area: foreground;
+    width: 130%;
+    margin-left: -38%;
+    margin-bottom: -60%;
+  }
 
-    .foreground-image2 {
-      grid-area: foreground;
-      width: 130%;
-      margin-left: -50%;
-      margin-bottom: -40%;
-    }
+  .foreground-image2 {
+    grid-area: foreground;
+    width: 130%;
+    margin-left: -50%;
+    margin-bottom: -40%;
+  }
+  .forside_wine img {
+    max-width: 90%;
+    height: auto;
+    margin-top: 100px;
+    margin-left: 80px;
+  }
+  .forside_intro {
+    line-height: 0.8;
+    margin-left: 10px;
+    margin-top: 0;
+  }
+  #forside_intro_2 {
+    line-height: 1.5;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  #forside_intro_3 {
+    line-height: 1.5;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .forside_illustrationer img {
+    margin-left: 20%;
+    max-width: 50%;
+    margin-top: 10%;
+  }
+  .anmeldelse p {
+    font-style: italic;
+    font-size: 1.1rem;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 30px;
+  }
+  .anmeldelse p a {
+    text-decoration-color: black;
+    color: black;
+  }
+  .anmeldelse p a:hover {
+    text-decoration-color: blue;
+    color: blue;
+  }
+  .sociale_medier_icon {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    background-repeat: no-repeat;
+    padding-bottom: 100px;
+    background-size: 300px;
+    margin-bottom: 10px;
+  }
+  .sociale_medier_icon img {
+    width: 40px;
+    height: 40px;
+    padding: 20px;
+  }
+  .sociale_medier h1 {
+    padding-top: 20%;
+    text-align: center;
+  }
+  .menu_bottom {
+    padding-left: 4%;
+  }
+
+  /* Tablet og desktop styling */
+  @media only screen and (min-width: 800px) {
     .forside_wine img {
       max-width: 90%;
       height: auto;
-      margin-top: 100px;
-      margin-left: 80px;
+      position: relative;
+      padding-left: 30%;
+      padding-top: 5%;
     }
+
     .forside_intro {
-      line-height: 0.8;
-      margin-left: 10px;
-      margin-top: 0;
+      line-height: 1;
+      padding-left: 5%;
+      margin-top: -10%;
     }
+    .menu_bottom {
+      padding-left: 7%;
+    }
+    .forside_intro h1 {
+      font-size: 4.5rem;
+    }
+
+    .forside_intro h2 {
+      font-size: 2.5rem;
+    }
+    .forside_intro p {
+      font-size: 1.5rem;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding-right: 5%;
+      padding-left: 2%;
+    }
+
+    .background-image1 {
+      width: 140%;
+      height: auto;
+      transform: translate(10%, -25%);
+      margin-top: 200px;
+    }
+    .background-image {
+      max-width: 160%;
+
+      padding-left: 10%;
+      padding-bottom: 30%;
+    }
+
+    .foreground-image {
+      transform: translate(10%, -35%);
+      width: 130%;
+      height: auto;
+    }
+
     #forside_intro_2 {
-      line-height: 1.5;
-      margin-left: 10px;
-      margin-right: 10px;
-    }
-    #forside_intro_3 {
-      line-height: 1.5;
-      margin-left: 10px;
-      margin-right: 10px;
+      padding-left: 5%;
+      border-left: 2px solid #232188;
+      margin-top: 25%;
+      margin-bottom: 10%;
     }
 
     .forside_illustrationer img {
-      margin-left: 20%;
-      max-width: 50%;
-      margin-top: 10%;
+      max-width: 100%;
+      margin-top: 0;
+      margin-left: 0;
     }
-    .anmeldelse p {
-      font-style: italic;
-      font-size: 1.1rem;
-      padding-left: 40px;
-      padding-right: 40px;
-      padding-top: 30px;
+    .forside_illustrationer {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      margin-bottom: 10%;
+      margin-top: 15%;
     }
-
-    .sociale_medier_icon {
-      display: flex;
-      justify-content: center;
-      margin-top: 20px;
-      background-repeat: no-repeat;
+    .rullebaggrund {
       padding-bottom: 100px;
-      background-size: 300px;
-      margin-bottom: 10px;
+      padding-top: 300px;
+      margin-top: 0;
     }
-    .sociale_medier_icon img {
-      width: 40px;
-      height: 40px;
-      padding: 20px;
+    #forside_intro_3 {
+      padding-left: 5%;
+      border-right: 2px solid #232188;
+      margin-top: 20%;
+      margin-bottom: 15%;
+      padding-right: 15%;
     }
     .sociale_medier h1 {
-      padding-top: 20%;
+      padding-top: 7%;
       text-align: center;
     }
-    .menu_bottom {
-      padding-left: 4%;
+    .sociale_medier_icon img {
+      width: 60%;
+      height: auto;
+    }
+    .sociale_medier_icon {
+      padding-bottom: 0;
+    }
+    .book_bottom {
+      padding-top: 5%;
+    }
+    .anmeldelse p {
+      text-align: center;
+      font-style: italic;
+      font-size: 1.3rem;
+      padding-top: 150px;
+      padding-left: 20px;
+    }
+    .fork img {
+      padding-bottom: 0;
     }
 
-    /* Tablet og desktop styling */
-    @media only screen and (min-width: 800px) {
-      .forside_wine img {
-        max-width: 90%;
-        height: auto;
-        position: relative;
-        padding-left: 30%;
-        padding-top: 5%;
-      }
-
-      .forside_intro {
-        line-height: 1;
-        padding-left: 5%;
-        margin-top: -10%;
-      }
-      .menu_bottom {
-        padding-left: 7%;
-      }
-      .forside_intro h1 {
-        font-size: 4.5rem;
-      }
-
-      .forside_intro h2 {
-        font-size: 2.5rem;
-      }
-      .forside_intro p {
-        font-size: 1.5rem;
-      }
-
-      .container {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        padding-right: 5%;
-        padding-left: 2%;
-      }
-
-      .background-image1 {
-        width: 140%;
-        height: auto;
-        transform: translate(10%, -25%);
-      }
-
-      .foreground-image {
-        transform: translate(10%, -35%);
-        width: 130%;
-        height: auto;
-      }
-
-      #forside_intro_2 {
-        padding-left: 5%;
-        border-left: 2px solid #232188;
-        margin-top: 20%;
-        margin-bottom: 20%;
-      }
-      .image-container {
-        padding-top: 40%;
-      }
-      .forside_illustrationer img {
-        max-width: 100%;
-        margin-top: 0;
-        margin-left: 0;
-      }
-      .forside_illustrationer {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        margin-bottom: 10%;
-      }
-      .rullebaggrund {
-        padding-bottom: 100px;
-        padding-top: 300px;
-        margin-top: 0;
-      }
-      #forside_intro_3 {
-        padding-left: 5%;
-        border-right: 2px solid #232188;
-        margin-top: 20%;
-        margin-bottom: 15%;
-        padding-right: 15%;
-      }
-      .sociale_medier h1 {
-        padding-top: 7%;
-        text-align: center;
-      }
-      .sociale_medier_icon img {
-        width: 60%;
-        height: auto;
-      }
-      .sociale_medier_icon {
-        padding-bottom: 0;
-      }
-      .book_bottom {
-        padding-top: 5%;
-      }
-      .anmeldelse p {
-        text-align: center;
-        font-style: italic;
-        font-size: 1.3rem;
-        padding-top: 150px;
-        padding-left: 20px;
-      }
-      .fork img {
-        padding-bottom: 0;
-      }
-
-    
-      .image-container {
+    .image-container {
       display: flex;
       justify-content: center;
-      margin-bottom: 180px;
-
-      
+      margin-bottom: 20px;
     }
 
     .image-container {
@@ -333,7 +340,6 @@ import MainLayout from "../layout/MainLayout.astro";
     .image-container p {
       left: 90px;
       font-size: medium;
-      
     }
 
     .foreground-image1 {
@@ -345,12 +351,7 @@ import MainLayout from "../layout/MainLayout.astro";
     .foreground-image2 {
       width: 130%;
       margin-left: -43%;
-      margin-bottom: -32%;
+      margin-bottom: -20%;
     }
-   
-      
-    }
-
-    
-  </style>
-</MainLayout>
+  }
+</style>
