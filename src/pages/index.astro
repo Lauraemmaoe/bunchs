@@ -24,8 +24,9 @@ import MainLayout from "../layout/MainLayout.astro";
   <div id="forside_intro_grid">
     <div class="container">
       <div class="image-container">
-        <img src="/img/bunchsvinbar.webp" alt="Baggrundsbillede" class="background-image" />
-        <img src="/img/wine_background.webp" alt="Forgrundsbillede" class="foreground-image" />
+        <img src="/img/susogmads_forside.webp" alt="Baggrundsbillede" class="background-image" />
+        <p>Owners Mads & Susanne Bunch</p>
+        <img src="/img/wine_background.webp" alt="Forgrundsbillede" class="foreground-image1" />
       </div>
 
       <div id="forside_intro_2">
@@ -78,8 +79,8 @@ import MainLayout from "../layout/MainLayout.astro";
         </div>
       </div>
       <div class="image-container">
-        <img src="/img/bunchsvinbar.webp" alt="Baggrundsbillede" class="background-image" />
-        <img src="/img/wine_background.webp" alt="Forgrundsbillede" class="foreground-image" />
+        <img src="/img/bunchskilt.webp" alt="Baggrundsbillede" class="background-image" />
+        <img src="/img/susogmads_2.webp" alt="Forgrundsbillede" class="foreground-image2" />
       </div>
     </div>
   </div>
@@ -110,8 +111,18 @@ import MainLayout from "../layout/MainLayout.astro";
     .image-container {
       display: flex;
       justify-content: center;
-      margin-top: 50px;
       margin-bottom: 50px;
+      margin-top: 50px
+      
+    }
+
+    .image-container p {
+      position: absolute;
+      left: 70px;
+      font-size: x-small;
+      color: white;
+  
+      
     }
 
     .image-container {
@@ -126,14 +137,21 @@ import MainLayout from "../layout/MainLayout.astro";
       max-width: 130%;
       height: auto;
       margin-left: -30%;
-      box-shadow: 5px 5px 5px black;
+    
     }
 
-    .foreground-image {
+    .foreground-image1 {
+      grid-area: foreground;
+      width: 130%;
+      margin-left: -38%;
+      margin-bottom: -60%;
+    }
+
+    .foreground-image2 {
       grid-area: foreground;
       width: 130%;
       margin-left: -50%;
-      margin-bottom: -24%;
+      margin-bottom: -40%;
     }
     .forside_wine img {
       max-width: 90%;
@@ -228,7 +246,7 @@ import MainLayout from "../layout/MainLayout.astro";
         padding-left: 2%;
       }
 
-      .background-image {
+      .background-image1 {
         width: 140%;
         height: auto;
         transform: translate(10%, -25%);
@@ -295,6 +313,44 @@ import MainLayout from "../layout/MainLayout.astro";
       .fork img {
         padding-bottom: 0;
       }
+
+    
+      .image-container {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 180px;
+
+      
     }
+
+    .image-container {
+      display: grid;
+      grid-template-areas: "background foreground";
+      align-items: end;
+      margin-left: 100px;
+    }
+
+    .image-container p {
+      left: 90px;
+      font-size: medium;
+      
+    }
+
+    .foreground-image1 {
+      width: 130%;
+      margin-left: -40%;
+      margin-bottom: -30%;
+    }
+
+    .foreground-image2 {
+      width: 130%;
+      margin-left: -43%;
+      margin-bottom: -32%;
+    }
+   
+      
+    }
+
+    
   </style>
 </MainLayout>
