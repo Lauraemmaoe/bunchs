@@ -23,7 +23,7 @@ import MainLayout from "../layout/MainLayout.astro";
 
   <div id="forside_intro_grid">
     <div class="container">
-      <div class="image-container">
+      <div id="image-container">
         <img src="/img/susogmads_forside.webp" alt="Baggrundsbillede" class="background-image" />
         <p>Owners Mads & Susanne Bunch</p>
         <img src="/img/wine_background.webp" alt="Forgrundsbillede" class="foreground-image1" />
@@ -78,7 +78,7 @@ import MainLayout from "../layout/MainLayout.astro";
           <BookButton />
         </div>
       </div>
-      <div class="image-container">
+      <div id="image-container">
         <img src="/img/bunchsvinbarforside.webp" alt="Baggrundsbillede" class="background-image" />
         <img src="/img/susogmads_2.webp" alt="Forgrundsbillede" class="foreground-image2" />
       </div>
@@ -109,21 +109,21 @@ import MainLayout from "../layout/MainLayout.astro";
     padding-bottom: 40px;
   }
 
-  .image-container {
+  #image-container {
     display: flex;
     justify-content: center;
     margin-bottom: 50px;
     margin-top: 50px;
   }
 
-  .image-container p {
+  #image-container p {
     position: absolute;
     left: 70px;
     font-size: x-small;
     color: white;
   }
 
-  .image-container {
+  #image-container {
     display: grid;
     grid-template-areas: "background foreground";
     align-items: end;
@@ -324,20 +324,20 @@ import MainLayout from "../layout/MainLayout.astro";
       padding-bottom: 0;
     }
 
-    .image-container {
+    #image-container {
       display: flex;
       justify-content: center;
       margin-bottom: 20px;
     }
 
-    .image-container {
+    #image-container {
       display: grid;
       grid-template-areas: "background foreground";
       align-items: end;
       margin-left: 100px;
     }
 
-    .image-container p {
+    #image-container p {
       left: 90px;
       font-size: medium;
     }
