@@ -138,6 +138,11 @@ import MovingImgs from "../komponenter/MovingImgs.astro";
     .grid_event1_1 img {
       margin-top: 70px;
       max-width: 100%;
+      padding-left: 1%;
+      padding-right: 1%;
+    }
+    .grid_event3_2 {
+      padding-bottom: 15%;
     }
 
     /* desktop*/
@@ -145,13 +150,13 @@ import MovingImgs from "../komponenter/MovingImgs.astro";
     @media only screen and (min-width: 800px) {
       .grid_event1_1 img {
         margin-top: 30px;
-        max-width: 90%;
+        max-width: 80%;
+        margin-left: 10%;
       }
       .grid_event1 {
         display: grid;
         grid-template-columns: 1fr 1fr;
         margin-top: 150px;
-        gap: 20px;
       }
       .grid_event2 {
         padding-top: 50px;
@@ -182,7 +187,7 @@ import MovingImgs from "../komponenter/MovingImgs.astro";
         grid-template-columns: 1fr 1fr;
       }
       .glass img {
-        max-width: 35%;
+        max-width: 40%;
       }
       .grid_knap2 {
         padding-bottom: 8%;
@@ -192,6 +197,16 @@ import MovingImgs from "../komponenter/MovingImgs.astro";
       }
       .grid_event1_2 h1 {
         font-size: 3rem;
+        margin-top: 10%;
+      }
+      .grid_event1_2 {
+        padding-left: 0%;
+      }
+      .glass {
+        border-bottom: 2px solid #232188;
+        padding-bottom: 30px;
+        margin-right: 10%;
+        margin-left: 10%;
       }
     }
   </style>

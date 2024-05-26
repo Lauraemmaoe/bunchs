@@ -16,7 +16,7 @@ import Some from "./Some.astro";
     <div class="inner">
       <ul>
         <li><a href="/menu">Menu</a></li>
-        <li><a href="https://book.easytablebooking.com/book/?id=f6c9f&lang=auto&kuid=0e490165-6d9f-49a4-9fe7-3a3035f9273d&kref=CgMq5QaTH9Yf">Book tabel</a></li>
+        <li><a href="https://book.easytablebooking.com/book/?id=f6c9f&lang=auto&kuid=0e490165-6d9f-49a4-9fe7-3a3035f9273d&kref=CgMq5QaTH9Yf">Book table</a></li>
         <li><a href="/events">Events</a></li>
         <li><a href="/gallary">Gallery</a></li>
         <div class="some"><li><Some /></li></div>
@@ -35,7 +35,6 @@ import Some from "./Some.astro";
     display: flex;
     justify-content: center;
     margin-top: 50px;
-    padding-right: 45px;
   }
   .logo {
     z-index: 9999;
@@ -132,6 +131,11 @@ import Some from "./Some.astro";
       padding-bottom: 20px;
       padding-right: 80px;
     }
+    .logo img:hover {
+      filter: drop-shadow(0 0 10px rgba(9, 81, 52, 0.5));
+      transform: scale(1.05);
+      transition: all 0.3s ease;
+    }
     .menu {
       display: flex;
       justify-content: flex-end;
@@ -148,7 +152,9 @@ import Some from "./Some.astro";
       flex-direction: row;
       justify-content: flex-end;
       gap: 20px;
+      margin-top: 1%;
     }
+
     .burger-icon {
       display: none;
     }
