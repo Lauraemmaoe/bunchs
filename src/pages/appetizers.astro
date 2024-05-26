@@ -19,18 +19,17 @@ console.log(data);
       <div class="ost_illustration">
         <img src="/svg/cheese.svg" alt="" />
       </div>
+      <div><h1>Bunchs Appetizers</h1></div>
       <div class="gaffel_illustration">
         <img src="/svg/fork.svg" alt="" />
       </div>
     </div>
-    <h1>Bunchs Appetizers</h1>
   </div>
 
   <div class="card_grid">
     <p>'Ask the staff for any allergies'</p>
     <div class="clickhere"><p>Click on the cards to see the appetizers.</p></div>
   </div>
-
 
   <section class="appetizers">
     {
@@ -42,35 +41,29 @@ console.log(data);
 </MainLayout>
 
 <style>
-
-
   h1 {
     font-size: 3rem;
     text-align: center;
     color: #232188;
     border-bottom: 4px solid rgb(0, 0, 0);
-    margin-left: 5%;
-    margin-right: 5%;
-    padding-top: 0;
+    padding-top: 10%;
   }
   .ost_illustration {
-    max-width: 40%;
-    margin-left: 10%;
     margin-top: 20%;
   }
-  .ost_illustration {
-    padding-top: 50px;
+
+  .ost_illustration img {
+    max-width: 100%;
   }
   .grid_ost_fork {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 30%;
   }
 
   .gaffel_illustration img {
     transform: rotate(-55deg);
-    max-width: 25%;
-    margin-left: 30%;
-    padding-top: 87px;
+    max-width: 60%;
   }
   p {
     font-size: 1rem;
@@ -81,15 +74,17 @@ console.log(data);
   @media only screen and (min-width: 800px) {
     h1 {
       font-size: 5.5rem;
-      margin-left: 15%;
-      margin-right: 15%;
+      margin-left: 0%;
+      margin-right: 0%;
     }
     .gaffel_illustration img {
-      max-width: 20%;
+      max-width: 27%;
+      margin-left: 40%;
+      margin-top: 10%;
     }
     .ost_illustration {
-      max-width: 30%;
-      margin-top: 6%;
+      max-width: 45%;
+      margin-left: 10%;
     }
 
     .appetizers {
@@ -100,15 +95,16 @@ console.log(data);
     .grid_ost_fork {
       padding-top: 5%;
       display: grid;
-      grid-template-columns: 1fr 1fr;
-    }
-    .gaffel_illustration img {
-      padding-top: 20px;
-      margin-left: 60%;
+      grid-template-columns: 1fr 1fr 1fr;
+      margin-top: 7%;
     }
 
     .clickhere {
-    display: none;
-}
+      display: none;
+    }
+    .appetizers {
+      margin-left: 5%;
+      margin-right: 5%;
+    }
   }
 </style>
