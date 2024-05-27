@@ -3,28 +3,36 @@ const { data } = Astro.props;
 console.log(data);
 ---
 
-<div class="grid_wine">
+
 <div class="flip-card">
-  <div style=`background-image: url(${data.wine_imgs})` class="flip-card-inner">
+<div class="flip-card-inner">
+  <div class="flip-card-front">
+    <div style=`background-image: url(${data.wine_imgs})` class="flip-card-front"></div>
 
-    <div class="flip-card-front">
-      
-<article>
-  <h1>{data.wine}</h1>
-  <img src="/svg/winecard.svg" alt="" />
-
-  <div class="card_text">
-    <h2>Type: {data.type}</h2>
-    <p>Grape:{data.grape}</p>
-
-    <p>Location: {data.location}</p>
+      <div class="flip-card-back">
+        <article>
+          <h1>{data.wine}</h1>
+          <img src="/svg/winecard.svg" alt="" />
+        
+          <div class="card_text">
+            <h2>Type: {data.type}</h2>
+            <p>Grape:{data.grape}</p>
+        
+            <p>Location: {data.location}</p>
+          </div>
+          <h3>{data.price_wine} DKK</h3></article>
+      </div>
   </div>
-  <h3>{data.price_wine} DKK</h3>
 </div>
+
+
+
+
+
+
 </div>
-</div>
-  </article>
-</div>
+
+
 
 
 
@@ -69,7 +77,7 @@ article {
 }
 
 
-.flip-card-inner {
+.flip-card-inner, {
   transition: transform 2s;
   transform-style: preserve-3d;
   background-size: cover;
