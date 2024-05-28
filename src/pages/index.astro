@@ -5,6 +5,7 @@ import BookButton from "../komponenter/BookButton.astro";
 import MovingImgs from "../komponenter/MovingImgs.astro";
 import "../style/style.css";
 import MainLayout from "../layout/MainLayout.astro";
+import Arrow from "../komponenter/Arrow.astro";
 ---
 
 <MainLayout>
@@ -19,6 +20,7 @@ import MainLayout from "../layout/MainLayout.astro";
 
   <div class="menu_bottom">
     <MenuButton />
+    <Arrow />
   </div>
 
   <div id="forside_intro_grid">
@@ -218,6 +220,10 @@ import MainLayout from "../layout/MainLayout.astro";
   }
   .menu_bottom {
     padding-left: 4%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 50vw;
   }
 
   /* Tablet og desktop styling */
