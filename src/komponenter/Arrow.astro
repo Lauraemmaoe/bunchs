@@ -3,9 +3,7 @@
 ---
 
 <div class="pil2">
-  <a href="#forside_intro_2">
-    <img src="/svg/pil_ned.svg" alt="pil" />
-  </a>
+  <img id="pil" src="/svg/pil_ned.svg" alt="pil" />
 </div>
 <style>
   .pil2 {
@@ -19,4 +17,17 @@
   .pil2 img {
     width: 100%;
   }
+  @media only screen and (max-width: 600px) {
+    .pil2 {
+      display: none; /* Skjuler elementet på enheder med en skærmbredde på 600px eller mindre */
+    }
+  }
 </style>
+
+<script>
+  let forside = document.querySelector("#forside_intro_2");
+  let pil = document.querySelector("#pil");
+  pil.addEventListener("click", () => {
+    forside.scrollIntoView({ behavior: "smooth" });
+  });
+</script>
